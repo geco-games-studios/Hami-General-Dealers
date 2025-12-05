@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function Footer() {
   const currentYear = new Date().getFullYear()
 
@@ -8,7 +10,7 @@ export function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="font-bold text-xl bg-accent text-accent-foreground px-2 py-1 rounded">HGD</div>
+              <Image src="/logo.png" alt="HGD Logo" width={40} height={40} className="rounded" />
               <h3 className="font-bold text-lg">Hami General Dealers</h3>
             </div>
             <p className="opacity-90">

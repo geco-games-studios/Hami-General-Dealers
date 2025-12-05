@@ -16,15 +16,10 @@ export function About() {
           <div>
             <h2 className="text-4xl font-bold mb-6 text-foreground">Who We Are</h2>
             <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-              Hami General Dealers is a professional agricultural business specializing in large-scale egg production
-              and nationwide distribution. We maintain rigorous operational standards and strategic partnerships across
-              five key regional hubs.
+              Hami General Dealers is a well-established and reputable Sole Proprietorship enterprise, founded and registered in 2015. From its inception, the company has been driven by a core mission: to empower Zambian farmers and livestock producers by providing high-quality, cost-effective agricultural inputs and services. Over the years, it has grown from a local supplier into a trusted partner for agricultural productivity across its operational regions.
             </p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Our commitment to quality, consistency, and professionalism makes us the preferred choice for retailers,
-              distributors, and institutional buyers. We operate with integrity and reliability in every transaction.
-            </p>
-            <div className="space-y-4">
+            
+            {/* <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="text-2xl font-bold text-primary flex-shrink-0">✓</div>
                 <div>
@@ -53,7 +48,7 @@ export function About() {
                   <p className="text-muted-foreground">Business-focused management and customer relations</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

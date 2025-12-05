@@ -5,25 +5,25 @@ import { Users } from "lucide-react"
 export function Team() {
   const team = [
     {
-      name: "John Mwale",
-      role: "Founder & CEO",
+      name: "Nchimunya Hamimbo",
+      role: "Chief Executive Director",
       description:
-        "With 15+ years in agricultural business, John leads HGD's vision for sustainable farming excellence.",
+        "Our Chief Executive Director, provides the strategic vision and executive leadership that guides HGD's mission.",
     },
     {
-      name: "Grace Banda",
+      name: "Mapalo Kayange",
+      role: "General Manager",
+      description: "As General Manager, Mapalo Kayange provides strategic leadership and oversees the seamless daily operations of all company locations.",
+    },
+    {
+      name: "Wendy Maimbo",
       role: "Operations Manager",
-      description: "Grace ensures seamless operations across all locations, maintaining our quality standards.",
+      description: "Wendy Maimbo, as our Operations Manager, is the architect of our daily efficiency. She designs, implements, and optimizes the core processes that power our service delivery. ",
     },
     {
-      name: "David Chisamba",
-      role: "Sales & Distribution",
-      description: "David manages our regional partnerships and delivery networks across all service areas.",
-    },
-    {
-      name: "Patricia Moyo",
-      role: "Quality & Compliance",
-      description: "Patricia oversees product quality, health standards, and regulatory compliance.",
+      name: "Harrison Chooye",
+      role: "Farm Manager",
+      description: "Harrison Chooye, our Farm Manager, is the steward of our land and livestock. He provides hands-on leadership to ensure the highest standards of animal welfare, crop health, and operational efficiency",
     },
   ]
 

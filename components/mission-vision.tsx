@@ -12,9 +12,7 @@ export function MissionVision() {
               Our Mission
             </h3>
             <p className="text-lg leading-relaxed">
-              To deliver consistent, high-quality egg supply to businesses and institutions across the nation. We
-              maintain excellence through professional operations, strategic partnerships, and unwavering commitment to
-              customer satisfaction and reliable service.
+             Seeks to achieve high quality goods and services and a good distribution network in Zambia by giving our customers the best price, and undertake investment activities that will enhance the capital base. The company seeks to contribute to social economical development of our country through the use of a qualified and experienced workforce in the execution of its works. 
             </p>
           </div>
 
@@ -25,9 +23,7 @@ export function MissionVision() {
               Our Vision
             </h3>
             <p className="text-lg leading-relaxed">
-              To establish Hami General Dealers as the premier agricultural supplier in the region, recognized for
-              operational excellence, innovation, and the ability to meet diverse business needs. We aspire to be the
-              trusted partner of choice for enterprises seeking reliability and quality.
+              Our vision is to offer our clients, both big and small, world class service coupled with fair pricing, and unfaltering belief in our products, equipment and services offered whilst maintaining an element of fun in an ever changing marketplace. We strive to operate in an equal opportunity environment and value independency and encourage entrepreneurial flair. 
             </p>
           </div>
         </div>
