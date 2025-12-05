@@ -2,25 +2,32 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 const slides = [
   {
     id: 1,
     title: "Enterprise-Grade Agriculture",
     subtitle: "Reliable egg supply chains across the nation with professional operations",
-    gradient: "from-[#49374e] to-[#e1aa19]",
+    image: "/farm-chickens-1.jpg",
   },
   {
     id: 2,
-    title: "Trusted Business Partner",
-    subtitle: "Serving retailers, distributors, and institutions nationwide since establishment",
-    gradient: "from-[#e1aa19] to-[#d1ae47]",
+    title: "Professional Team Operations",
+    subtitle: "A dedicated workforce committed to quality and excellence across all locations",
+    image: "/farm-team.jpg",
   },
   {
     id: 3,
+    title: "Efficient Logistics & Distribution",
+    subtitle: "Our fleet ensures timely delivery to Mazabuka, Chirundu, Lusaka, Kafue, and Siavonga",
+    image: "/farm-logistics.jpg",
+  },
+  {
+    id: 4,
     title: "Premium Quality Eggs",
-    subtitle: "Our flagship product delivered with consistency to Mazabuka, Chirundu, Lusaka, Kafue, and Siavonga",
-    gradient: "from-[#d1ae47] to-[#49374e]",
+    subtitle: "State-of-the-art facilities producing consistent, high-quality products daily",
+    image: "/farm-operations.jpg",
   },
 ]
 
@@ -43,11 +50,18 @@ export function HeroSlider() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 bg-gradient-to-r ${slide.gradient} transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
           }`}
         >
-          <div className="absolute inset-0 bg-black/25" />
+          <Image
+            src={slide.image || "/placeholder.svg"}
+            alt={slide.title}
+            fill
+            className="object-cover"
+            priority={index === 0}
+          />
+          <div className="absolute inset-0 bg-black/40" />
           <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{slide.title}</h2>
             <p className="text-xl md:text-2xl opacity-95 text-balance">{slide.subtitle}</p>
