@@ -4,78 +4,82 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Professional neutral blue-based theme */
-  --background: oklch(0.98 0.01 220);
-  --foreground: oklch(0.15 0.02 220);
-  --card: oklch(0.99 0 0);
-  --card-foreground: oklch(0.15 0.02 220);
-  --popover: oklch(0.99 0 0);
-  --popover-foreground: oklch(0.15 0.02 220);
-  /* Primary: professional blue */
-  --primary: oklch(0.42 0.14 259);
-  --primary-foreground: oklch(0.99 0 0);
-  /* Secondary: slate blue */
-  --secondary: oklch(0.52 0.1 260);
-  --secondary-foreground: oklch(0.99 0 0);
-  --muted: oklch(0.92 0.01 220);
-  --muted-foreground: oklch(0.5 0.02 220);
-  /* Accent: teal */
-  --accent: oklch(0.55 0.12 180);
-  --accent-foreground: oklch(0.99 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.92 0.01 220);
-  --input: oklch(0.96 0.01 220);
-  --ring: oklch(0.42 0.14 259);
-  --chart-1: oklch(0.42 0.14 259);
-  --chart-2: oklch(0.52 0.1 260);
-  --chart-3: oklch(0.55 0.12 180);
-  --chart-4: oklch(0.62 0.1 240);
-  --chart-5: oklch(0.48 0.12 250);
+  /* Farm palette: warm cream background, barnwood body text, yellow & sage accents */
+  --background: #F7F1E6; /* Warm cream */
+  --heading: #000000; /* Headings & primary text */
+  --foreground: #5A3B2E; /* Barnwood brown for body text */
+  --card: #FFFFFF;
+  --card-foreground: #5A3B2E;
+  --popover: #FFFFFF;
+  --popover-foreground: #5A3B2E;
+  /* Primary buttons: Yellow with black text */
+  --primary: #E1AA19; /* Yellow */
+  --primary-foreground: #000000;
+  /* Secondary buttons: Sage green with white text */
+  --secondary: #9DBFA1; /* Sage green */
+  --secondary-foreground: #FFFFFF;
+  --muted: #F4EEE6;
+  --muted-foreground: #5A3B2E;
+  /* Accent: yellow for small icons and highlights */
+  --accent: #E1AA19;
+  --accent-foreground: #000000;
+  /* Destructive: use a deep brown to stay monochrome/natural */
+  --destructive: #5A3B2E;
+  --destructive-foreground: #FFFFFF;
+  --border: #5A3B2E; /* Barnwood brown for dividers */
+  --input: #FFFFFF;
+  --ring: #E1AA19;
+  --chart-1: #E1AA19;
+  --chart-2: #9DBFA1;
+  --chart-3: #5A3B2E;
+  --chart-4: #C9B59A;
+  --chart-5: #A88E72;
   --radius: 0.625rem;
-  --sidebar: oklch(0.98 0.01 220);
-  --sidebar-foreground: oklch(0.15 0.02 220);
-  --sidebar-primary: oklch(0.42 0.14 259);
-  --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.55 0.12 180);
-  --sidebar-accent-foreground: oklch(0.15 0.02 220);
-  --sidebar-border: oklch(0.92 0.01 220);
-  --sidebar-ring: oklch(0.42 0.14 259);
+  --sidebar: #ffffff;
+  --sidebar-foreground: #000000;
+  --sidebar-primary: #000000;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #000000;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e6e6e6;
+  --sidebar-ring: #000000;
 }
 
 .dark {
-  --background: oklch(0.12 0.02 220);
-  --foreground: oklch(0.95 0.02 220);
-  --card: oklch(0.15 0.02 220);
-  --card-foreground: oklch(0.95 0.02 220);
-  --popover: oklch(0.15 0.02 220);
-  --popover-foreground: oklch(0.95 0.02 220);
-  --primary: oklch(0.62 0.14 259);
-  --primary-foreground: oklch(0.12 0.02 220);
-  --secondary: oklch(0.55 0.1 260);
-  --secondary-foreground: oklch(0.95 0.02 220);
-  --muted: oklch(0.25 0.02 220);
-  --muted-foreground: oklch(0.7 0.02 220);
-  --accent: oklch(0.65 0.12 180);
-  --accent-foreground: oklch(0.12 0.02 220);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.25 0.02 220);
-  --input: oklch(0.2 0.02 220);
-  --ring: oklch(0.62 0.14 259);
-  --chart-1: oklch(0.62 0.14 259);
-  --chart-2: oklch(0.55 0.1 260);
-  --chart-3: oklch(0.65 0.12 180);
-  --chart-4: oklch(0.72 0.1 240);
-  --chart-5: oklch(0.58 0.12 250);
-  --sidebar: oklch(0.15 0.02 220);
-  --sidebar-foreground: oklch(0.95 0.02 220);
-  --sidebar-primary: oklch(0.62 0.14 259);
-  --sidebar-primary-foreground: oklch(0.12 0.02 220);
-  --sidebar-accent: oklch(0.65 0.12 180);
-  --sidebar-accent-foreground: oklch(0.95 0.02 220);
-  --sidebar-border: oklch(0.25 0.02 220);
-  --sidebar-ring: oklch(0.62 0.14 259);
+  /* Dark mode variant aligned to palette (dark cream -> deep brown/charcoal) */
+  --background: #12120f; /* near-black for depth */
+  --heading: #ffffff;
+  --foreground: #e6dcca; /* light warm gray for body */
+  --card: #0f0f0f;
+  --card-foreground: #e6dcca;
+  --popover: #151515;
+  --popover-foreground: #e6dcca;
+  --primary: #E1AA19; /* keep yellow for CTAs */
+  --primary-foreground: #000000;
+  --secondary: #7a9a84; /* darker sage */
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #cfc4b5;
+  --accent: #E1AA19;
+  --accent-foreground: #000000;
+  --destructive: #7a5a4a;
+  --destructive-foreground: #ffffff;
+  --border: #3f2f27; /* barnwood-ish dark */
+  --input: #171717;
+  --ring: #E1AA19;
+  --chart-1: #E1AA19;
+  --chart-2: #7a9a84;
+  --chart-3: #5a3b2e;
+  --chart-4: #9e8b77;
+  --chart-5: #7b6a59;
+  --sidebar: #0f0f0f;
+  --sidebar-foreground: #e6dcca;
+  --sidebar-primary: #E1AA19;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: #7a9a84;
+  --sidebar-accent-foreground: #e6dcca;
+  --sidebar-border: #3f2f27;
+  --sidebar-ring: #E1AA19;
 }
 
 @theme inline {
@@ -126,4 +130,31 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Headings should use black for perfect readability */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+}
+
+/* Utility: desaturate images if you want a monotone feel (optional)
+img.grayscale {
+  filter: grayscale(100%);
+}
+*/
+
+/* Temporary: ensure logo image renders normally (no blend/mask/filter)
+   Use this to help diagnose the logo-rendering issue; remove after testing. */
+img[src="/logo.png"],
+picture > img[src="/logo.png"] {
+  mix-blend-mode: normal !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  filter: none !important;
+  background: transparent !important;
 }
