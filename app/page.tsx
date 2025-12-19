@@ -11,20 +11,25 @@ import { OurReach } from "@/components/our-reach"
 import { Ventures } from "@/components/ventures"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { MediaShowcase } from "@/components/media-showcase"
+import { OurStory } from "@/components/our-story"
+import { OurFuture } from "@/components/our-future"
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
       <HeroSlider />
+      <MediaShowcase />
       <LocationsCarousel />
       <About />
+      <OurStory />
       <Team />
       <CustomerStories />
       <OurReach />
       <Ventures />
-      {/* </CHANGE> */}
       <MissionVision />
+      <OurFuture />
       <ContactSection />
       <Footer />
     </div>

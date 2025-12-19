@@ -50,21 +50,35 @@ export function HeroSlider() {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
+          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
+            index === current ? "opacity-100 scale-100 z-10" : "opacity-0 scale-105 z-0 pointer-events-none"
           }`}
         >
           <Image
             src={slide.image || "/placeholder.svg"}
             alt={slide.title}
             fill
-            className="object-cover"
+            className={`object-cover transition-transform text-white duration-[5000ms] ease-out ${
+              index === current ? "scale-110" : "scale-100"
+            }`}
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{slide.title}</h2>
-            <p className="text-xl md:text-2xl opacity-95 text-balance">{slide.subtitle}</p>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60" />
+          <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
+            {/* <h2
+              className={`text-4xl md:text-6xl font-bold mb-4 text-white text-balance transition-all duration-700 delay-200 ${
+                index === current ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              {slide.title}
+            </h2> */}
+            <p
+              className={`text-xl md:text-2xl text-white text-balance transition-all duration-700 delay-500 ${
+                index === current ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+              }`}
+            >
+              {slide.subtitle}
+            </p>
           </div>
         </div>
       ))}
@@ -72,14 +86,14 @@ export function HeroSlider() {
       {/* Navigation Buttons */}
       <button
         onClick={previous}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 hover:scale-110 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Previous slide"
       >
         <ChevronLeft size={24} />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/20 hover:bg-white/40 hover:scale-110 text-white p-2 rounded-full transition-all duration-300"
         aria-label="Next slide"
       >
         <ChevronRight size={24} />
@@ -91,7 +105,9 @@ export function HeroSlider() {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full transition ${index === current ? "bg-white" : "bg-white/50"}`}
+            className={`rounded-full transition-all duration-300 ${
+              index === current ? "bg-white w-8 h-3" : "bg-white/50 w-3 h-3 hover:bg-white/75"
+            }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

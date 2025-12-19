@@ -6,7 +6,7 @@ export function Team() {
   const team = [
     {
       name: "Nchimunya Hamimbo",
-      role: "Chief Executive Director",
+      role: "Chief Executive Director/ Founder",
       description:
         "Our Chief Executive Director, provides the strategic vision and executive leadership that guides HGD's mission.",
     },
