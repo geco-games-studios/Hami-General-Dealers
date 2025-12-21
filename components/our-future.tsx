@@ -69,7 +69,7 @@ export function OurFuture() {
         </div>
 
         {/* Vision Statement */}
-        <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-center text-white shadow-2xl">
+        {/* <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-center text-white shadow-2xl">
           <h3 className="text-3xl font-bold mb-6">Our 2030 Vision</h3>
           <p className="text-lg leading-relaxed max-w-4xl mx-auto mb-8">
             By 2030, Hami General Dealers aims to be the leading agricultural enterprise in Zambia, recognized for
@@ -91,7 +91,7 @@ export function OurFuture() {
               <div className="text-sm">Quality Assurance</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

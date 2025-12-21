@@ -15,19 +15,19 @@ const slides = [
     id: 2,
     title: "Professional Team Operations",
     subtitle: "A dedicated workforce committed to quality and excellence across all locations",
-    image: "/farm-team.jpg",
+    image: "/farm-team.jpeg",
   },
   {
     id: 3,
     title: "Efficient Logistics & Distribution",
     subtitle: "Our fleet ensures timely delivery to Mazabuka, Chirundu, Lusaka, Kafue, and Siavonga",
-    image: "/farm-logistics.jpg",
+    image: "/farm-logistics.jpeg",
   },
   {
     id: 4,
-    title: "Premium Quality Eggs",
-    subtitle: "State-of-the-art facilities producing consistent, high-quality products daily",
-    image: "/farm-operations.jpg",
+    title: "Promising Future Growth",
+    subtitle: "Expanding our horizon with a new, cutting-edge poultry facility.",
+    image: "/farm-operations.jpeg",
   },
 ]
 
