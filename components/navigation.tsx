@@ -18,28 +18,19 @@ export function Navigation() {
             </div>
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu - REDUCED ITEMS */}
           <div className="hidden md:flex gap-8">
             <a href="#about" className="hover:opacity-80 transition">
               About
             </a>
-            <a href="#locations" className="hover:opacity-80 transition">
-              Locations
+            <a href="#hami-agro" className="hover:opacity-80 transition">
+              Products
             </a>
-            <a href="#team" className="hover:opacity-80 transition">
-              Team
+            <a href="#agro-shops" className="hover:opacity-80 transition">
+              Shops
             </a>
-            <a href="#stories" className="hover:opacity-80 transition">
-              Stories
-            </a>
-            <a href="#reach" className="hover:opacity-80 transition">
-              Our Reach
-            </a>
-            <a href="#ventures" className="hover:opacity-80 transition">
-              Ventures
-            </a>
-            <a href="#mission" className="hover:opacity-80 transition">
-              Mission & Vision
+            <a href="#our-story" className="hover:opacity-80 transition">
+              Story
             </a>
             <a href="#contact" className="hover:opacity-80 transition">
               Contact
@@ -58,23 +49,14 @@ export function Navigation() {
             <a href="#about" className="block py-2 hover:opacity-80 transition">
               About
             </a>
-            <a href="#locations" className="block py-2 hover:opacity-80 transition">
-              Locations
+            <a href="#hami-agro" className="block py-2 hover:opacity-80 transition">
+              Products
             </a>
-            <a href="#team" className="block py-2 hover:opacity-80 transition">
-              Team
+            <a href="#agro-shops" className="block py-2 hover:opacity-80 transition">
+              Shops
             </a>
-            <a href="#stories" className="block py-2 hover:opacity-80 transition">
-              Stories
-            </a>
-            <a href="#reach" className="block py-2 hover:opacity-80 transition">
-              Our Reach
-            </a>
-            <a href="#ventures" className="block py-2 hover:opacity-80 transition">
-              Ventures
-            </a>
-            <a href="#mission" className="block py-2 hover:opacity-80 transition">
-              Mission & Vision
+            <a href="#our-story" className="block py-2 hover:opacity-80 transition">
+              Story
             </a>
             <a href="#contact" className="block py-2 hover:opacity-80 transition">
               Contact

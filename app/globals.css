@@ -4,82 +4,82 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Farm palette: warm cream background, barnwood body text, yellow & sage accents */
-  --background: #F7F1E6; /* Warm cream */
-  --heading: #000000; /* Headings & primary text */
-  --foreground: #5A3B2E; /* Barnwood brown for body text */
-  --card: #FFFFFF;
-  --card-foreground: #5A3B2E;
-  --popover: #FFFFFF;
-  --popover-foreground: #5A3B2E;
-  /* Primary buttons: Yellow with black text */
-  --primary: #E1AA19; /* Yellow */
-  --primary-foreground: #000000;
-  /* Secondary buttons: Sage green with white text */
-  --secondary: #9DBFA1; /* Sage green */
-  --secondary-foreground: #FFFFFF;
-  --muted: #F4EEE6;
-  --muted-foreground: #5A3B2E;
-  /* Accent: yellow for small icons and highlights */
-  --accent: #E1AA19;
+  /* Updated color palette: removed brown tones, added vibrant blues and teals */
+  --background: #f0f9ff; /* Light blue background */
+  --heading: #0f172a; /* Dark slate */
+  --foreground: #1e293b; /* Slate for body text */
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  /* Primary: Vibrant green */
+  --primary: #10b981; /* Emerald green */
+  --primary-foreground: #ffffff;
+  /* Secondary: Bright teal */
+  --secondary: #0891b2; /* Cyan */
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  /* Accent: Bright orange */
+  --accent: #f59e0b; /* Amber */
   --accent-foreground: #000000;
-  /* Destructive: use a deep brown to stay monochrome/natural */
-  --destructive: #5A3B2E;
-  --destructive-foreground: #FFFFFF;
-  --border: #5A3B2E; /* Barnwood brown for dividers */
-  --input: #FFFFFF;
-  --ring: #E1AA19;
-  --chart-1: #E1AA19;
-  --chart-2: #9DBFA1;
-  --chart-3: #5A3B2E;
-  --chart-4: #C9B59A;
-  --chart-5: #A88E72;
+  /* Destructive: Red */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #ffffff;
+  --ring: #10b981;
+  --chart-1: #10b981;
+  --chart-2: #0891b2;
+  --chart-3: #f59e0b;
+  --chart-4: #06b6d4;
+  --chart-5: #8b5cf6;
   --radius: 0.625rem;
   --sidebar: #ffffff;
-  --sidebar-foreground: #000000;
-  --sidebar-primary: #000000;
+  --sidebar-foreground: #1e293b;
+  --sidebar-primary: #10b981;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #000000;
+  --sidebar-accent: #0891b2;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e6e6e6;
-  --sidebar-ring: #000000;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #10b981;
 }
 
 .dark {
-  /* Dark mode variant aligned to palette (dark cream -> deep brown/charcoal) */
-  --background: #12120f; /* near-black for depth */
-  --heading: #ffffff;
-  --foreground: #e6dcca; /* light warm gray for body */
-  --card: #0f0f0f;
-  --card-foreground: #e6dcca;
-  --popover: #151515;
-  --popover-foreground: #e6dcca;
-  --primary: #E1AA19; /* keep yellow for CTAs */
+  /* Dark mode: deep blue background with light text */
+  --background: #0f172a; /* Dark blue */
+  --heading: #f1f5f9;
+  --foreground: #e2e8f0; /* Light slate */
+  --card: #1e293b;
+  --card-foreground: #e2e8f0;
+  --popover: #1e293b;
+  --popover-foreground: #e2e8f0;
+  --primary: #10b981;
   --primary-foreground: #000000;
-  --secondary: #7a9a84; /* darker sage */
+  --secondary: #0891b2;
   --secondary-foreground: #ffffff;
-  --muted: #1a1a1a;
-  --muted-foreground: #cfc4b5;
-  --accent: #E1AA19;
+  --muted: #334155;
+  --muted-foreground: #cbd5e1;
+  --accent: #f59e0b;
   --accent-foreground: #000000;
-  --destructive: #7a5a4a;
+  --destructive: #f87171;
   --destructive-foreground: #ffffff;
-  --border: #3f2f27; /* barnwood-ish dark */
-  --input: #171717;
-  --ring: #E1AA19;
-  --chart-1: #E1AA19;
-  --chart-2: #7a9a84;
-  --chart-3: #5a3b2e;
-  --chart-4: #9e8b77;
-  --chart-5: #7b6a59;
-  --sidebar: #0f0f0f;
-  --sidebar-foreground: #e6dcca;
-  --sidebar-primary: #E1AA19;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: #10b981;
+  --chart-1: #10b981;
+  --chart-2: #0891b2;
+  --chart-3: #f59e0b;
+  --chart-4: #06b6d4;
+  --chart-5: #a78bfa;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #e2e8f0;
+  --sidebar-primary: #10b981;
   --sidebar-primary-foreground: #000000;
-  --sidebar-accent: #7a9a84;
-  --sidebar-accent-foreground: #e6dcca;
-  --sidebar-border: #3f2f27;
-  --sidebar-ring: #E1AA19;
+  --sidebar-accent: #0891b2;
+  --sidebar-accent-foreground: #e2e8f0;
+  --sidebar-border: #334155;
+  --sidebar-ring: #10b981;
 }
 
 @theme inline {

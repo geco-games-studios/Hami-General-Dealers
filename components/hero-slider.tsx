@@ -29,6 +29,24 @@ const slides = [
     subtitle: "Expanding our horizon with a new, cutting-edge poultry facility.",
     image: "/farm-operations.jpeg",
   },
+  {
+    id: 5,
+    title: "Shikoswe Agro Shop",
+    subtitle: "Quality agricultural supplies and expert farming solutions in Southern Region",
+    image: "/Shikoswe/1.jpeg",
+  },
+  {
+    id: 6,
+    title: "Chirundu Agro Shop",
+    subtitle: "Gateway to northern markets with comprehensive agro-retail services",
+    image: "/Chirundu/1.jpeg",
+  },
+  {
+    id: 7,
+    title: "Kafue Town Agro Shop",
+    subtitle: "Industrial zone agricultural hub serving commercial and retail clients",
+    image: "/Kafue-town/1.jpeg",
+  },
 ]
 
 export function HeroSlider() {

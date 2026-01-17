@@ -1,78 +1,119 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
 export function OurStory() {
+  const [visibleItems, setVisibleItems] = useState([false, false, false])
+
+  useEffect(() => {
+    visibleItems.forEach((_, index) => {
+      setTimeout(() => {
+        setVisibleItems((prev) => {
+          const newState = [...prev]
+          newState[index] = true
+          return newState
+        })
+      }, index * 300)
+    })
+  }, [])
+
+  const timelineItems = [
+    {
+      year: "2015",
+      title: "Foundation & Vision",
+      description: "Hami General Dealers was established with a clear mission to empower Zambian farmers",
+      image: "/Kafue-town/2.jpeg",
+    },
+    {
+      year: "2016-2019",
+      title: "Growth & Expansion",
+      description: "Expanded across Mazabuka, Chirundu, Lusaka, Kafue, and Siavonga",
+      image: "/Shikoswe/5.jpeg",
+    },
+    {
+      year: "2020-Present",
+      title: "Industry Leader",
+      description: "A well-established enterprise, continuously investing in infrastructure and technology",
+      image: "/Kafue-town/8.jpeg",
+    },
+  ]
+
   return (
-    <section id="our-story" className="py-20 px-4 bg-gradient-to-br from-primary/5 to-secondary/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Our Story</h2>
+    <section id="our-story" className="py-20 px-4 bg-background relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute w-96 h-96 bg-primary rounded-full blur-3xl animate-pulse top-20 left-10"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-4">Our Story</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A journey of growth, dedication, and commitment to Zambian agriculture
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Timeline Content */}
-          <div className="space-y-8">
-            <div className="relative pl-8 border-l-4 border-primary">
-              <div className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
-              <div className="mb-1 text-sm font-semibold text-primary">2015 - The Beginning</div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Foundation & Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Hami General Dealers was established with a clear mission: to empower Zambian farmers by providing
-                high-quality, affordable agricultural inputs. Starting as a local supplier, we set out to make a
-                meaningful difference in the agricultural sector.
-              </p>
-            </div>
+        {/* Vertical Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Center line */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary to-secondary transform -translate-x-1/2"></div>
 
-            <div className="relative pl-8 border-l-4 border-primary">
-              <div className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
-              <div className="mb-1 text-sm font-semibold text-primary">2016-2019 - Growth & Expansion</div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Building Trust</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Through consistent quality and reliable service, we expanded our reach across Mazabuka, Chirundu,
-                Lusaka, Kafue, and Siavonga. Our commitment to farmers earned us a reputation as a trusted agricultural
-                partner.
-              </p>
-            </div>
+          {timelineItems.map((item, index) => (
+            <div
+              key={index}
+              className={`mb-12 transform transition-all duration-700 ${
+                visibleItems[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+            >
+              <div className={`grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? "md:direction-rtl" : ""}`}>
+                <div className="hidden md:flex justify-center">
+                  {index % 2 === 0 ? (
+                    <div className="flex flex-col items-center">
+                      <img
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-24 h-24 rounded-full border-4 border-primary shadow-lg object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : null}
+                </div>
 
-            <div className="relative pl-8 border-l-4 border-primary">
-              <div className="absolute -left-3 top-0 w-6 h-6 bg-primary rounded-full border-4 border-background"></div>
-              <div className="mb-1 text-sm font-semibold text-primary">2020-Present - Thriving Enterprise</div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Industry Leader</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Today, we stand as a well-established enterprise, continuously investing in infrastructure, technology,
-                and our workforce. Our strategic distribution network and unwavering quality standards make us a
-                preferred choice for agricultural productivity.
-              </p>
-            </div>
-          </div>
+                {/* Content */}
+                <div className="p-8 rounded-lg bg-card border-2 border-primary/30 hover:border-primary hover:shadow-xl transition-all duration-300 group">
+                  <div className="text-primary font-bold text-2xl mb-2 group-hover:text-secondary transition-colors">
+                    {item.year}
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
 
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="relative rounded-lg overflow-hidden shadow-2xl">
-              <img
-                src="/modern-poultry-farm-facility.jpg"
-                alt="Hami General Dealers facility"
-                className="w-full h-96 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
-                <div className="text-white">
-                  <p className="text-3xl font-bold mb-2">9+ Years</p>
-                  <p className="text-lg">Of Dedicated Service to Zambian Agriculture</p>
+                <div className="hidden md:flex justify-center">
+                  {index % 2 === 1 ? (
+                    <div className="flex flex-col items-center">
+                      <img
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-24 h-24 rounded-full border-4 border-primary shadow-lg object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Stats Grid */}
-            <div className="mt-6 grid grid-cols-2 gap-4">
-              <div className="bg-white rounded-lg p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-primary mb-1">5+</div>
-                <div className="text-sm text-muted-foreground">Key Locations</div>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-lg text-center">
-                <div className="text-3xl font-bold text-primary mb-1">1000+</div>
-                <div className="text-sm text-muted-foreground">Satisfied Customers</div>
-              </div>
-            </div>
+        {/* Stats section */}
+        <div className="grid md:grid-cols-2 gap-8 mt-20">
+          <div className="group bg-gradient-to-br from-primary to-primary/80 rounded-lg p-8 text-white text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="text-5xl font-bold mb-2">9+</div>
+            <div className="text-lg font-semibold">Years of Service</div>
+          </div>
+          <div className="group bg-gradient-to-br from-secondary to-secondary/80 rounded-lg p-8 text-white text-center hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <div className="text-5xl font-bold mb-2">1000+</div>
+            <div className="text-lg font-semibold">Satisfied Customers</div>
           </div>
         </div>
       </div>

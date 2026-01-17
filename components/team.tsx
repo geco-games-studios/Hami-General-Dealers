@@ -11,9 +11,9 @@ export function Team() {
         "Our Chief Executive Director, provides the strategic vision and executive leadership that guides HGD's mission.",
     },
     {
-      name: "Mapalo Kayange",
+      name: "Eliat Choolwe Mazila",
       role: "General Manager",
-      description: "As General Manager, Mapalo Kayange provides strategic leadership and oversees the seamless daily operations of all company locations.",
+      description: "As General Manager, Eliat Choolwe Mazila provides strategic leadership and oversees the seamless daily operations of all company locations.",
     },
     {
       name: "Wendy Maimbo",

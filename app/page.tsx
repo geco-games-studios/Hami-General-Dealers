@@ -14,6 +14,9 @@ import { Footer } from "@/components/footer"
 import { MediaShowcase } from "@/components/media-showcase"
 import { OurStory } from "@/components/our-story"
 import { OurFuture } from "@/components/our-future"
+import { HamiAgro } from "@/components/hami-agro"
+import { AgroShops } from "@/components/agro-shops"
+import { Chatbot } from "@/components/chatbot"
 
 export default function Home() {
   return (
@@ -23,6 +26,8 @@ export default function Home() {
       <MediaShowcase />
       <LocationsCarousel />
       <About />
+      <HamiAgro />
+      <AgroShops />
       <OurStory />
       <Team />
       <CustomerStories />
@@ -32,6 +37,7 @@ export default function Home() {
       <OurFuture />
       <ContactSection />
       <Footer />
+      <Chatbot />
     </div>
   )
 }
