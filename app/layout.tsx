@@ -1,36 +1,15 @@
-import type React from "react"
-// ... existing code ...
-import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
+import type { Metadata } from 'next'
+import { Geist, Geist_Mono } from 'next/font/google'
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+import './globals.css'
+
+const _geist = Geist({ subsets: ['latin'] })
+const _geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  // <CHANGE> Updated metadata for Hami General Dealers landing page
-  title: "Hami General Dealers - Premium Eggs | Quality Farming",
-  description:
-    "Fresh, premium eggs from Hami General Dealers. Serving Mazabuka, Chirundu, Lusaka, Kafue, and Siavonga with nationwide delivery and quality you can trust.",
-  generator: "v0.app",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
+  title: 'Hami General Dealers - Agricultural & Business Solutions',
+  description: 'Leading provider of agricultural and business solutions through Hami General Dealers, Agrovert, Mifi, and Hami Farms.',
+  generator: 'v0.app',
 }
 
 export default function RootLayout({
@@ -40,9 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className="font-sans antialiased" suppressHydrationWarning>
         {children}
-        <Analytics />
       </body>
     </html>
   )
