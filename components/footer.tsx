@@ -1,125 +1,121 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Mail, Twitter, Youtube, Zap } from 'lucide-react'
+
+const footerLinks = {
+  Organizations: [
+    { href: '/agrovert', label: 'Agrovert' },
+    { href: '/farms', label: 'Hami Farms' },
+    { href: '/mifi', label: 'Mifi Business Solutions' },
+    { href: '/hamiz', label: 'Hamiz Motors' },
+    { href: '/mipro', label: 'Mipro' },
+  ],
+  Features: [
+    { href: '/about', label: 'About' },
+    { href: '/our-work', label: 'Our Work' },
+    { href: '/events', label: 'Events' },
+  ],
+  Support: [
+    { href: '/contact', label: 'Contact' },
+    { href: '/consult', label: 'Consulting' },
+    { href: '/media', label: 'Media' },
+  ],
+  Legal: [
+    { href: '#', label: 'Privacy' },
+    { href: '#', label: 'Terms of Service' },
+    { href: '#', label: 'Cookies' },
+  ],
+}
+
+const socials = [
+  { href: '#', label: 'Instagram', icon: Instagram },
+  { href: '#', label: 'YouTube', icon: Youtube },
+  { href: '#', label: 'Facebook', icon: Facebook },
+  { href: '#', label: 'Twitter', icon: Twitter },
+  { href: '#', label: 'LinkedIn', icon: Linkedin },
+]
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear()
-
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">H</span>
-              </div>
-              <h3 className="font-bold text-lg">Hami General Dealers</h3>
+    <footer className="bg-[#f2f2f2] px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl rounded-2xl bg-white p-6 shadow-sm md:p-8">
+        <div className="rounded-xl bg-orange-500 px-6 py-8 text-white md:px-10 md:py-10">
+          <div className="grid gap-8 md:grid-cols-[1fr_1.15fr] md:items-center">
+            <div>
+              <h2 className="max-w-md text-3xl font-black leading-tight md:text-4xl">
+                Subscribe to our newsletter
+              </h2>
+              <p className="mt-4 text-sm font-medium text-white/75">
+                Be the first to receive updates, tips, opportunities, and more.
+              </p>
             </div>
-            <p className="text-sm opacity-90">
-              Providing quality agricultural and business solutions across East Africa.
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div className="flex flex-col gap-3">
-            <h4 className="font-bold text-sm">Quick Links</h4>
-            <nav className="flex flex-col gap-2 text-sm">
-              <Link href="/" className="opacity-90 hover:opacity-100 transition-opacity">
-                Home
-              </Link>
-              <Link href="/about" className="opacity-90 hover:opacity-100 transition-opacity">
-                About Us
-              </Link>
-              <Link href="/our-work" className="opacity-90 hover:opacity-100 transition-opacity">
-                Our Work
-              </Link>
-              <Link href="/events" className="opacity-90 hover:opacity-100 transition-opacity">
-                Events
-              </Link>
-            </nav>
-          </div>
-
-          {/* Our Organizations */}
-          <div className="flex flex-col gap-3">
-            <h4 className="font-bold text-sm">Our Organizations</h4>
-            <nav className="flex flex-col gap-2 text-sm">
-              <Link href="/agrovert" className="opacity-90 hover:opacity-100 transition-opacity">
-                Hami Agrovert
-              </Link>
-              <Link href="/mifi" className="opacity-90 hover:opacity-100 transition-opacity">
-                Hami Mifi
-              </Link>
-              <Link href="/farms" className="opacity-90 hover:opacity-100 transition-opacity">
-                Hami Farms
-              </Link>
-              <Link href="/consult" className="opacity-90 hover:opacity-100 transition-opacity">
-                Consultation
-              </Link>
-            </nav>
-          </div>
-
-          {/* Contact Info */}
-          <div className="flex flex-col gap-3">
-            <h4 className="font-bold text-sm">Contact</h4>
-            <div className="flex flex-col gap-3 text-sm">
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Nairobi, Kenya</span>
+            <form className="w-full">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <label className="sr-only" htmlFor="footer-email">
+                  Email address
+                </label>
+                <input
+                  id="footer-email"
+                  type="email"
+                  placeholder="Enter your email"
+                  className="h-12 flex-1 rounded-full border-0 bg-white/25 px-5 text-sm font-semibold text-white placeholder:text-white/65 outline-none ring-1 ring-white/10 transition focus:ring-2 focus:ring-white"
+                />
+                <button
+                  type="submit"
+                  className="h-12 rounded-full bg-white px-7 text-sm font-extrabold text-slate-950 transition-colors hover:bg-slate-100"
+                >
+                  Subscribe
+                </button>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+254 20 XXXX XXXX</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@hamigroup.co.ke</span>
-              </div>
-            </div>
+              <p className="mt-3 text-xs font-medium text-white/70">
+                By subscribing you agree to our Privacy Policy.
+              </p>
+            </form>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-white/20 my-8"></div>
+        <div className="grid gap-10 px-2 py-10 md:grid-cols-5 md:px-0">
+          <div>
+            <Link href="/" className="inline-flex items-center gap-2 text-lg font-black text-slate-950">
+              <Zap className="h-5 w-5 fill-orange-500 text-orange-500" />
+              Hami General Dealers
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
+              Your group for agriculture, commerce, farms, motors, projects, and business solutions.
+            </p>
+            <div className="mt-6 flex items-center gap-3">
+              {socials.map((social) => {
+                const Icon = social.icon
 
-        {/* Bottom Footer */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm opacity-90">
-            © {currentYear} Hami General Dealers. All rights reserved.
-          </p>
-          
-          {/* Social Links */}
-          <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="p-2 hover:bg-white/20 rounded-lg transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-5 h-5" />
-            </a>
+                return (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-colors hover:bg-orange-500 hover:text-white"
+                  >
+                    <Icon className="h-4 w-4" />
+                  </Link>
+                )
+              })}
+            </div>
           </div>
+
+          {Object.entries(footerLinks).map(([group, links]) => (
+            <div key={group}>
+              <h3 className="text-sm font-black text-slate-950">{group}</h3>
+              <nav className="mt-4 flex flex-col gap-3">
+                {links.map((link) => (
+                  <Link key={link.label} href={link.href} className="text-sm font-medium text-slate-500 transition-colors hover:text-orange-500">
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          ))}
+        </div>
+
+        <div className="border-t border-slate-100 px-2 pt-6 text-center text-xs font-semibold text-slate-400 md:px-0">
+          © {new Date().getFullYear()} Hami General Dealers. All rights reserved.
         </div>
       </div>
     </footer>

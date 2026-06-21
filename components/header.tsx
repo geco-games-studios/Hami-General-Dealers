@@ -2,166 +2,108 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Leaf, Mail, Menu, Phone, ShoppingBag, X } from 'lucide-react'
 
 const navigationItems = [
   { href: '/', label: 'Home' },
-  {
-    label: 'Organization',
-    submenu: [
-      { href: '/about', label: 'About Us' },
-      { href: '/team', label: 'Our Team' },
-      { href: '/our-work', label: 'Our Work' },
-    ],
-  },
-  {
-    label: 'Divisions',
-    submenu: [
-      { href: '/agrovert', label: 'Agrovert' },
-      { href: '/mifi', label: 'Mifi' },
-      { href: '/farms', label: 'Farms' },
-    ],
-  },
-  {
-    label: 'Services',
-    submenu: [
-      { href: '/consult', label: 'Consulting' },
-      { href: '/our-work', label: 'Our Services' },
-    ],
-  },
-  {
-    label: 'Resources',
-    submenu: [
-      { href: '/events', label: 'Events' },
-      { href: '/media', label: 'Media' },
-      { href: '/', label: 'Blog' },
-    ],
-  },
+  { href: '/agrovert', label: 'Agrovert' },
+  { href: '/farms', label: 'Farms' },
+  { href: '/mifi', label: 'Mifi' },
+  { href: '/hamiz', label: 'Hamiz' },
+  { href: '/mipro', label: 'Mipro' },
+  { href: '/our-work', label: 'Our Work' },
+  { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
 
-interface NavItem {
-  href?: string
-  label: string
-  submenu?: NavItem[]
-}
-
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-
-  const renderNavItem = (item: NavItem, isMobile = false) => {
-    if (!item.submenu) {
-      return (
-        <Link
-          key={item.href}
-          href={item.href || '#'}
-          onClick={() => isMobile && setIsOpen(false)}
-          className="px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-md transition-colors block"
-        >
-          {item.label}
-        </Link>
-      )
-    }
-
-    return (
-      <div key={item.label} className={`relative group ${isMobile ? 'w-full' : ''}`}>
-        <button
-          onClick={() => isMobile && setOpenDropdown(openDropdown === item.label ? null : item.label)}
-          className="px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-md transition-colors flex items-center gap-1 w-full"
-        >
-          {item.label}
-          <ChevronDown className={`w-4 h-4 transition-transform ${isMobile && openDropdown === item.label ? 'rotate-180' : ''}`} />
-        </button>
-
-        {/* Desktop Dropdown */}
-        {!isMobile && (
-          <div className="absolute left-0 mt-0 w-48 bg-white border border-border rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
-            {item.submenu.map((subitem) => (
-              <Link
-                key={subitem.href}
-                href={subitem.href || '#'}
-                className="block px-4 py-2 text-sm text-foreground hover:bg-muted first:rounded-t-md last:rounded-b-md transition-colors"
-              >
-                {subitem.label}
-              </Link>
-            ))}
-          </div>
-        )}
-
-        {/* Mobile Dropdown */}
-        {isMobile && openDropdown === item.label && (
-          <div className="pl-4 bg-muted rounded-md mt-1">
-            {item.submenu.map((subitem) => (
-              <Link
-                key={subitem.href}
-                href={subitem.href || '#'}
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-sm text-foreground hover:bg-muted/50 rounded-md transition-colors"
-              >
-                {subitem.label}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    )
-  }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-border shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-emerald-100">
+      <div className="hidden bg-slate-950 text-white md:block">
+        <div className="mx-auto flex h-8 max-w-6xl items-center justify-between px-4 text-xs">
+          <p>All supplies, farm inputs, and consulting under one trusted roof</p>
+          <div className="flex items-center gap-6">
+            <span className="inline-flex items-center gap-2">
+              <Phone className="h-3.5 w-3.5 text-emerald-300" />
+              (570) 262-1413
+            </span>
+            <span className="inline-flex items-center gap-2">
+              <Mail className="h-3.5 w-3.5 text-emerald-300" />
+              address@gmail.com
+            </span>
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">H</span>
+            <div className="flex h-11 w-11 items-center justify-center rounded-md border-2 border-emerald-700 text-emerald-800">
+              <Leaf className="h-6 w-6" />
             </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-primary text-sm">Hami</span>
-              <span className="text-xs text-muted-foreground">General Dealers</span>
+            <div className="leading-tight">
+              <span className="block text-xl font-extrabold text-slate-950">Hami</span>
+              <span className="block text-xs font-semibold text-emerald-700">General Dealers</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {navigationItems.map((item) => renderNavItem(item, false))}
+          <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-semibold text-slate-700 transition-colors hover:text-emerald-700"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden sm:flex items-center gap-4">
+          <div className="hidden items-center gap-3 sm:flex">
+            <Link
+              href="/contact"
+              className="text-sm font-semibold text-slate-700 transition-colors hover:text-emerald-700"
+            >
+              Sign In
+            </Link>
             <Link
               href="/consult"
-              className="px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 rounded-md border border-slate-950 px-5 py-2.5 text-sm font-semibold text-slate-950 transition-colors hover:border-emerald-700 hover:bg-emerald-700 hover:text-white"
             >
-              Get Consultation
+              <ShoppingBag className="h-4 w-4" />
+              Partner
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors"
+            className="rounded-md p-2 text-slate-900 transition-colors hover:bg-emerald-50 lg:hidden"
+            aria-label="Toggle navigation"
           >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4 border-t border-border">
-            <nav className="flex flex-col gap-1">
-              {navigationItems.map((item) => renderNavItem(item, true))}
+          <div className="border-t border-emerald-100 pb-4 lg:hidden">
+            <nav className="flex flex-col gap-1 pt-4">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-emerald-50 hover:text-emerald-700"
+                >
+                  {item.label}
+                </Link>
+              ))}
               <Link
                 href="/consult"
                 onClick={() => setIsOpen(false)}
-                className="px-3 py-2 mt-2 bg-primary text-primary-foreground rounded-md text-sm font-medium hover:bg-primary/90 transition-colors"
+                className="mt-2 rounded-md bg-emerald-700 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
               >
-                Get Consultation
+                Partner With Us
               </Link>
             </nav>
           </div>

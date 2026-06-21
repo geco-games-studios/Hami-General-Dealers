@@ -1,172 +1,278 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import {
+  ArrowRight,
+  BadgeDollarSign,
+  BriefcaseBusiness,
+  CheckCircle2,
+  Facebook,
+  Instagram,
+  Leaf,
+  Linkedin,
+  Play,
+  ShieldCheck,
+  Twitter,
+  Users,
+} from 'lucide-react'
 
 export const metadata = {
   title: 'About Us - Hami General Dealers',
   description: 'Learn about Hami General Dealers, our mission, vision, and commitment to agricultural excellence.',
 }
 
+const strengths = [
+  {
+    title: 'Best Value Guaranteed',
+    description: 'Reliable sourcing, fair pricing, and practical support for every partner.',
+    icon: BadgeDollarSign,
+  },
+  {
+    title: 'Business Analysis',
+    description: 'Clear planning for farming, supply, trade, and growth decisions.',
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: 'Professional Team',
+    description: 'A hands-on group serving farmers, suppliers, clients, and communities.',
+    icon: Users,
+  },
+]
+
+const directors = [
+  { name: 'Nchimunya Ilute Hamaimbo', role: 'Chief Executive Director', initials: 'NH' },
+  { name: 'Miyanda Hamaimbo', role: 'Co-founder and Chief Commercial Director', initials: 'MH' },
+]
+
+const managementTeam = [
+  { name: 'Dyabbu Hikande', role: 'General Manager', initials: 'DH' },
+  { name: 'Choolwe Mwiinga', role: "Business Executive Officer / Director's PA", initials: 'CM' },
+  { name: 'Judith Hankombo', role: 'Finance Manager', initials: 'JH' },
+  { name: 'Mapalo Kayange', role: 'Human Resource Manager', initials: 'MK' },
+  { name: 'Brighton Mutena', role: 'Administrative Manager', initials: 'BM' },
+  { name: 'Rajesh Ngandu', role: 'Agrovert Manager', initials: 'RN' },
+  { name: 'Queen Chiinda', role: 'Operations Manager', initials: 'QC' },
+  { name: 'Harrison Chooye', role: 'Farm Manager', initials: 'HC' },
+  { name: 'Abestol Kaleya', role: 'Projects Officer', initials: 'AK' },
+]
+
+const socialIcons = [Facebook, Twitter, Linkedin, Instagram]
+
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-white text-slate-950">
       <Header />
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">
-              About Hami General Dealers
-            </h1>
-            <p className="text-xl text-white/90 max-w-3xl text-balance">
-              Pioneering sustainable agricultural and commercial solutions across East Africa.
-            </p>
+      <main>
+        <section className="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-slate-950 text-white">
+          <Image
+            src="/images/hami-about-team.png"
+            alt="Hami General Dealers team planning together"
+            fill
+            priority
+            className="object-cover opacity-35 grayscale"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-slate-950/55" />
+          <div className="relative z-10 px-4 text-center">
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.24em] text-emerald-300">Hami General Dealers</p>
+            <h1 className="text-5xl font-extrabold md:text-6xl">About us</h1>
           </div>
         </section>
 
-        {/* Mission, Vision, Values */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-lg">
-                <h3 className="text-2xl font-bold text-primary mb-3">Our Mission</h3>
-                <p className="text-muted-foreground">
-                  To empower agricultural communities and businesses through innovative, sustainable solutions that drive economic growth and improve livelihoods across East Africa.
+        <section className="bg-white py-16 md:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr]">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-emerald-700">
+                  <span className="h-2 w-2 rounded-full bg-emerald-600" />
+                  About Us
+                </span>
+                <h2 className="mt-6 text-4xl font-extrabold leading-tight text-slate-950 md:text-5xl">
+                  Introduction To Best <span className="text-emerald-700">Business Group!</span>
+                </h2>
+              </div>
+              <div className="grid gap-6 text-sm leading-7 text-slate-600 md:grid-cols-2">
+                <p>
+                  Hami General Dealers brings agriculture, trading, business support, and emerging mobility solutions into one practical organization.
+                </p>
+                <p>
+                  Through Agrovert, Hami Farms, Mifi Business Solutions, Hamiz Motors, and Mipro, we support clients with quality supply, planning, mobility, projects, and dependable execution.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {strengths.map((item) => {
+                const Icon = item.icon
+
+                return (
+                  <article key={item.title} className="flex items-center gap-5 rounded-md bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.10)]">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-700 text-white">
+                      <Icon className="h-7 w-7" />
+                    </div>
+                    <div>
+                      <h3 className="font-extrabold text-slate-950">{item.title}</h3>
+                      <p className="mt-1 text-sm leading-6 text-slate-500">{item.description}</p>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
+
+            <div className="relative mt-16 max-w-5xl">
+              <div className="relative aspect-[1.65] overflow-hidden rounded-md bg-slate-100 shadow-sm md:w-[72%]">
+                <Image
+                  src="/images/hami-about-team.png"
+                  alt="Hami General Dealers team collaboration"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 60vw, 100vw"
+                />
+              </div>
+              <div className="mt-6 overflow-hidden rounded-md bg-white shadow-[0_18px_50px_rgba(15,23,42,0.18)] md:absolute md:right-0 md:top-20 md:mt-0 md:w-[43%]">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/images/hami-hero-professional.png"
+                    alt="Hami General Dealers professional consultant"
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 38vw, 100vw"
+                  />
+                  <button className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-emerald-700 text-white shadow-xl" aria-label="Play video">
+                    <Play className="ml-1 h-7 w-7 fill-current" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-50 py-16 md:py-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-emerald-700 shadow-sm">
+                <span className="h-2 w-2 rounded-full bg-emerald-600" />
+                Our Team
+              </span>
+              <h2 className="mt-6 text-3xl font-extrabold text-slate-950 md:text-4xl">
+                Team Members
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-slate-500">
+                A practical team coordinating agriculture, trade, consulting, and operations across Hami divisions.
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-7 md:grid-cols-2">
+              {directors.map((member, index) => (
+                <article key={member.name} className="overflow-hidden rounded-md bg-white text-center shadow-sm">
+                  <div className="flex h-56 items-center justify-center bg-gradient-to-br from-emerald-50 via-slate-100 to-white">
+                    <div className="flex h-32 w-32 items-center justify-center rounded-full bg-white text-4xl font-extrabold text-emerald-700 shadow-lg">
+                      {member.initials}
+                    </div>
+                  </div>
+                  <div className="mx-8 -mt-9 rounded-md bg-emerald-700 px-5 py-5 text-white shadow-lg">
+                    <h3 className="text-lg font-extrabold">{member.name}</h3>
+                    <p className="mt-1 text-sm font-semibold text-white/80">{member.role}</p>
+                  </div>
+                  <div className="flex items-center justify-center gap-2 px-6 py-5 text-slate-500">
+                    {socialIcons.map((Icon, socialIndex) => (
+                      <Link
+                        href="#"
+                        key={`${member.name}-${socialIndex}`}
+                        className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 transition-colors hover:bg-emerald-700 hover:text-white"
+                        aria-label={`${member.name} social link ${socialIndex + 1}`}
+                      >
+                        <Icon className="h-3.5 w-3.5" />
+                      </Link>
+                    ))}
+                  </div>
+                  {index === 0 && <div className="h-1 bg-emerald-700" />}
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-16">
+              <div className="text-center">
+                <h3 className="text-2xl font-extrabold text-slate-950 md:text-3xl">Management Team</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-500">
+                  Department leaders keeping daily operations, finance, people, projects, farms, and Agrovert moving.
                 </p>
               </div>
 
-              <div className="bg-secondary/5 border-l-4 border-secondary p-6 rounded-lg">
-                <h3 className="text-2xl font-bold text-secondary mb-3">Our Vision</h3>
-                <p className="text-muted-foreground">
-                  To be the leading integrated agricultural and business solutions provider recognized for excellence, sustainability, and positive impact on communities.
-                </p>
-              </div>
-
-              <div className="bg-accent/10 border-l-4 border-accent p-6 rounded-lg">
-                <h3 className="text-2xl font-bold text-accent mb-3">Our Values</h3>
-                <ul className="text-muted-foreground space-y-2">
-                  <li>• Integrity and transparency</li>
-                  <li>• Innovation and excellence</li>
-                  <li>• Sustainability and responsibility</li>
-                  <li>• Community commitment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Company History */}
-        <section className="py-16 md:py-24 bg-muted/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
-              Our Story
-            </h2>
-            <div className="prose prose-lg max-w-3xl text-muted-foreground">
-              <p>
-                Founded in 2015 by visionary entrepreneurs with a passion for transforming agriculture, Hami General Dealers started with a simple belief: that better farming practices and smart commerce can lift entire communities out of poverty.
-              </p>
-              <p>
-                What began as a small trading operation has grown into an integrated business group with three distinct divisions, each addressing critical needs in the agricultural and commercial sectors.
-              </p>
-              <p>
-                Over the past nine years, we've built strong relationships with thousands of farmers, suppliers, and partners. Our commitment to quality, innovation, and sustainability has positioned us as a trusted leader in our industry.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Our Organizations */}
-        <section className="py-16 md:py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center text-balance">
-              Our Organizations
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Agrovert */}
-              <div className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-40 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-green-600">AG</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Hami Agrovert</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Sustainable Agriculture Solutions</p>
-                  <p className="text-muted-foreground mb-4">
-                    Specializing in eco-friendly farming practices and environmental conservation.
-                  </p>
-                  <Link
-                    href="/agrovert"
-                    className="text-primary font-semibold flex items-center gap-2 hover:text-primary/80 transition-colors"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Mifi */}
-              <div className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-40 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-blue-600">MF</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Hami Mifi</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">General Trade & Commerce</p>
-                  <p className="text-muted-foreground mb-4">
-                    Your reliable partner for quality general merchandise and business solutions.
-                  </p>
-                  <Link
-                    href="/mifi"
-                    className="text-primary font-semibold flex items-center gap-2 hover:text-primary/80 transition-colors"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-
-              {/* Farms */}
-              <div className="bg-white border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="h-40 bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center">
-                  <div className="text-4xl font-bold text-orange-600">HF</div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Hami Farms</h3>
-                  <p className="text-primary text-sm font-semibold mb-3">Modern Agriculture Operations</p>
-                  <p className="text-muted-foreground mb-4">
-                    Large-scale modern farming producing quality crops using advanced techniques.
-                  </p>
-                  <Link
-                    href="/farms"
-                    className="text-primary font-semibold flex items-center gap-2 hover:text-primary/80 transition-colors"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </div>
+              <div className="mt-10 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+                {managementTeam.map((member, index) => (
+                  <article key={member.name} className="overflow-hidden rounded-md bg-white text-center shadow-sm">
+                    <div className="flex h-44 items-center justify-center bg-gradient-to-br from-emerald-50 via-slate-100 to-white">
+                      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white text-2xl font-extrabold text-emerald-700 shadow-lg">
+                        {member.initials}
+                      </div>
+                    </div>
+                    <div className="mx-6 -mt-8 rounded-md bg-emerald-700 px-4 py-4 text-white shadow-lg">
+                      <h4 className="font-extrabold">{member.name}</h4>
+                      <p className="mt-1 text-xs font-semibold text-white/80">{member.role}</p>
+                    </div>
+                    <div className="flex items-center justify-center gap-2 px-6 py-5 text-slate-500">
+                      {socialIcons.map((Icon, socialIndex) => (
+                        <Link
+                          href="#"
+                          key={`${member.name}-${socialIndex}`}
+                          className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-50 transition-colors hover:bg-emerald-700 hover:text-white"
+                          aria-label={`${member.name} social link ${socialIndex + 1}`}
+                        >
+                          <Icon className="h-3.5 w-3.5" />
+                        </Link>
+                      ))}
+                    </div>
+                    {index === 0 && <div className="h-1 bg-emerald-700" />}
+                  </article>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Stats */}
-        <section className="py-16 md:py-24 bg-primary text-primary-foreground">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">9+</div>
-                <p className="text-white/90">Years of Experience</p>
+        <section className="bg-white py-16">
+          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-4 lg:px-8">
+            {[
+              ['9+', 'Years of Experience'],
+              ['5,000+', 'Farmers Supported'],
+              ['15+', 'Operating Locations'],
+              ['100%', 'Quality Commitment'],
+            ].map(([value, label]) => (
+              <div key={label} className="rounded-md border border-emerald-100 bg-[#f6fbf8] p-6 text-center">
+                <div className="text-4xl font-extrabold text-emerald-700">{value}</div>
+                <p className="mt-2 text-sm font-semibold text-slate-600">{label}</p>
               </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">5,000+</div>
-                <p className="text-white/90">Farmers Supported</p>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
-                <p className="text-white/90">Locations Across Kenya</p>
-              </div>
-              <div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
-                <p className="text-white/90">Commitment to Quality</p>
-              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-white pb-16 md:pb-24">
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+              {[
+                ['Hami Agrovert', 'Sustainable agriculture inputs and advisory.', '/agrovert', Leaf],
+                ['Mifi Business Solutions', 'General trade, commerce, and business support.', '/mifi', ShieldCheck],
+                ['Hami Farms', 'Modern production and farm operations.', '/farms', CheckCircle2],
+                ['Hamiz Motors', 'Vehicle sourcing and mobility support.', '/hamiz', BriefcaseBusiness],
+                ['Mipro', 'Projects, procurement, and delivery coordination.', '/mipro', Users],
+              ].map(([title, description, href, icon]) => {
+                const Icon = icon as typeof Leaf
+
+                return (
+                  <article key={title as string} className="rounded-md border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
+                    <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-extrabold text-slate-950">{title as string}</h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">{description as string}</p>
+                    <Link href={href as string} className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-emerald-700">
+                      Learn More <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </article>
+                )
+              })}
             </div>
           </div>
         </section>
