@@ -1,5 +1,6 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import Link from 'next/link'
 import { teamMembers } from '@/lib/data'
 import { TeamCard } from '@/components/cards'
 
@@ -127,7 +128,7 @@ export default function Team() {
               <div className="bg-white rounded-lg p-8 border border-border">
                 <h3 className="text-xl font-bold text-foreground mb-4">Impact Driven</h3>
                 <p className="text-muted-foreground">
-                  Every team member is committed to creating positive change and meaningful impact in agriculture and commerce.
+                  Every team member is committed to creating positive change through agriculture, microfinance, motors, IT, and media support.
                 </p>
               </div>
             </div>
@@ -143,9 +144,9 @@ export default function Team() {
             <p className="text-lg text-white/90 mb-8 text-balance">
               We're always looking for talented individuals passionate about agriculture and business excellence.
             </p>
-            <button className="px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+            <Link href="/careers" className="inline-flex px-8 py-3 bg-white text-primary font-semibold rounded-lg hover:bg-gray-100 transition-colors">
               View Career Opportunities
-            </button>
+            </Link>
           </div>
         </section>
       </main>

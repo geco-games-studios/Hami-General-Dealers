@@ -1,5 +1,6 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import Image from 'next/image'
 import { CheckCircle } from 'lucide-react'
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function Consult() {
               Expert Consultation Services
             </h1>
             <p className="text-xl text-white/90 max-w-3xl text-balance">
-              Get personalized advice from our experienced consultants to optimize your farming or business operations.
+              Get practical support for farming, agricultural inputs, supply planning, printing, design, and business operations.
             </p>
           </div>
         </section>
@@ -35,7 +36,7 @@ export default function Consult() {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Expert advisors with 10+ years of experience</span>
+                    <span className="text-foreground">Registered Zambian business operating since 2015</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
@@ -43,7 +44,7 @@ export default function Consult() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Proven track record of successful outcomes</span>
+                    <span className="text-foreground">Reliable source relationships for agricultural products</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
@@ -55,10 +56,14 @@ export default function Consult() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-primary/5 rounded-lg h-64 flex items-center justify-center border-2 border-primary/20">
-                <div className="text-center text-muted-foreground">
-                  <p>Consultation Services Image</p>
-                </div>
+              <div className="relative h-64 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
+                <Image
+                  src="/images/hami-hero-professional.png"
+                  alt="Hami General Dealers consultation services"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
               </div>
             </div>
           </div>
@@ -76,15 +81,15 @@ export default function Consult() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-primary font-bold text-lg">🌾</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Farm Management</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Farm and Poultry Support</h3>
                 <p className="text-muted-foreground mb-4">
-                  Comprehensive guidance on crop selection, soil management, irrigation, pest control, and harvest optimization.
+                  Practical guidance on layer production, eggs, stock feed, veterinary products, and poultry operations.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• Soil testing and analysis</li>
-                  <li>• Crop planning and rotation</li>
-                  <li>• Irrigation system design</li>
-                  <li>• Pest and disease management</li>
+                  <li>• Layer and egg production</li>
+                  <li>• Stock feed selection</li>
+                  <li>• Veterinary product support</li>
+                  <li>• Day-old chick supply guidance</li>
                 </ul>
               </div>
 
@@ -94,7 +99,7 @@ export default function Consult() {
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">Business Planning</h3>
                 <p className="text-muted-foreground mb-4">
-                  Strategic planning to grow your business, expand markets, and improve profitability.
+                  Strategic planning to grow your business, coordinate procurement, and improve reliable delivery.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-2">
                   <li>• Business strategy development</li>
@@ -108,15 +113,15 @@ export default function Consult() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-primary font-bold text-lg">♻️</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Sustainability</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Agricultural Inputs</h3>
                 <p className="text-muted-foreground mb-4">
-                  Transition to sustainable farming practices that protect the environment while maintaining yields.
+                  Support choosing and sourcing chicks, vaccines, feed, veterinary medicine, and related farm products.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• Organic certification</li>
-                  <li>• Water conservation</li>
-                  <li>• Carbon reduction</li>
-                  <li>• Biodiversity preservation</li>
+                  <li>• Animal feed and stock feed</li>
+                  <li>• Seed and farm inputs</li>
+                  <li>• Veterinary drugs</li>
+                  <li>• Supplier coordination</li>
                 </ul>
               </div>
 
@@ -124,15 +129,15 @@ export default function Consult() {
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <span className="text-primary font-bold text-lg">🎯</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Market Access</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Printing and Supply</h3>
                 <p className="text-muted-foreground mb-4">
-                  Connect with reliable buyers, understand market dynamics, and develop effective marketing strategies.
+                  Support for plain T-shirts, hoodies, printing, design, stationery, and general supply needs.
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-2">
-                  <li>• Buyer connections</li>
-                  <li>• Price negotiation</li>
-                  <li>• Quality standards</li>
-                  <li>• Branding and marketing</li>
+                  <li>• Event printing</li>
+                  <li>• Office supplies</li>
+                  <li>• Stationery sourcing</li>
+                  <li>• Delivery coordination</li>
                 </ul>
               </div>
             </div>
@@ -220,7 +225,7 @@ export default function Consult() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg border border-border p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-foreground mb-3">Single Session</h3>
-                <p className="text-3xl font-bold text-primary mb-4">KES 5,000</p>
+                <p className="text-3xl font-bold text-primary mb-4">Custom Quote</p>
                 <p className="text-muted-foreground text-sm mb-6">
                   One-time consultation session with our experts
                 </p>
@@ -233,10 +238,10 @@ export default function Consult() {
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-accent text-accent-foreground text-xs font-bold rounded-full">
                   POPULAR
                 </div>
-                <h3 className="text-xl font-bold mb-3">Quarterly Package</h3>
-                <p className="text-3xl font-bold mb-4">KES 45,000</p>
+                <h3 className="text-xl font-bold mb-3">Monthly Support</h3>
+                <p className="text-3xl font-bold mb-4">Custom Quote</p>
                 <p className="text-white/90 text-sm mb-6">
-                  4 monthly sessions with comprehensive support
+                  Regular sessions with practical follow-up and coordination
                 </p>
                 <button className="w-full px-6 py-2 bg-white text-primary rounded-lg hover:bg-gray-100 transition-colors font-semibold">
                   Select Plan
@@ -244,10 +249,10 @@ export default function Consult() {
               </div>
 
               <div className="bg-white rounded-lg border border-border p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-foreground mb-3">Annual Package</h3>
-                <p className="text-3xl font-bold text-primary mb-4">KES 150,000</p>
+                <h3 className="text-xl font-bold text-foreground mb-3">Project Package</h3>
+                <p className="text-3xl font-bold text-primary mb-4">Custom Quote</p>
                 <p className="text-muted-foreground text-sm mb-6">
-                  Year-round support with priority access
+                  Support for procurement, farm setup, printing, supply, or delivery projects
                 </p>
                 <button className="w-full px-6 py-2 border border-primary text-primary rounded-lg hover:bg-primary/5 transition-colors">
                   Book Now

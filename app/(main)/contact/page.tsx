@@ -42,8 +42,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Address</h3>
                       <p className="text-muted-foreground">
-                        Nairobi, Kenya<br />
-                        East Africa
+                        Lusaka, Zambia<br />
+                        Serving customers across Zambia
                       </p>
                     </div>
                   </div>
@@ -55,8 +55,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Phone</h3>
                       <p className="text-muted-foreground">
-                        +254 20 XXXX XXXX<br />
-                        +254 7XX XXX XXX
+                        +260 979 718945<br />
+                        +260 973 138283
                       </p>
                     </div>
                   </div>
@@ -68,8 +68,8 @@ export default function Contact() {
                     <div>
                       <h3 className="font-bold text-foreground mb-1">Email</h3>
                       <p className="text-muted-foreground">
-                        info@hamigroup.co.ke<br />
-                        support@hamigroup.co.ke
+                        ilutenchimunya@gmail.com<br />
+                        generalmanagerhami@gmail.com
                       </p>
                     </div>
                   </div>
@@ -166,34 +166,34 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-3">Nairobi Headquarters</h3>
+                <h3 className="text-lg font-bold text-foreground mb-3">Lusaka Office</h3>
                 <p className="text-muted-foreground mb-4">
-                  Nairobi, Kenya<br />
-                  Phone: +254 20 XXXX XXXX
+                  Lusaka, Zambia<br />
+                  Phone: +260 979 718945
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Our main office and headquarters for all operations.
+                  Main coordination point for company operations and customer support.
                 </p>
               </div>
 
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-3">Kiambu Office</h3>
+                <h3 className="text-lg font-bold text-foreground mb-3">Hami Farms</h3>
                 <p className="text-muted-foreground mb-4">
-                  Kiambu, Kenya<br />
-                  Phone: +254 7XX XXX XXX
+                  Zambia<br />
+                  Phone: +260 976 203395
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Hami Farms operations and training center.
+                  Poultry farming, egg production, cattle production, and farm operations support.
                 </p>
               </div>
 
               <div className="bg-white rounded-lg border border-border p-6">
-                <h3 className="text-lg font-bold text-foreground mb-3">Regional Centers</h3>
+                <h3 className="text-lg font-bold text-foreground mb-3">Supply Network</h3>
                 <p className="text-muted-foreground mb-4">
-                  Multiple locations across Kenya
+                  Distribution support across Zambia
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Serving our Agrovert and Mifi divisions throughout the region.
+                  Serving farmers, marketeers, Agrovert customers, and general supply clients.
                 </p>
               </div>
             </div>

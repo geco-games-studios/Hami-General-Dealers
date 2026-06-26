@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
-import { Leaf, Mail, Menu, Phone, ShoppingBag, X } from 'lucide-react'
+import { Mail, Menu, Phone, ShoppingBag, X } from 'lucide-react'
 
 const navigationItems = [
   { href: '/', label: 'Home' },
@@ -27,25 +28,26 @@ export default function Header() {
           <div className="flex items-center gap-6">
             <span className="inline-flex items-center gap-2">
               <Phone className="h-3.5 w-3.5 text-emerald-300" />
-              (570) 262-1413
+              +260 979 718945
             </span>
             <span className="inline-flex items-center gap-2">
               <Mail className="h-3.5 w-3.5 text-emerald-300" />
-              address@gmail.com
+              generalmanagerhami@gmail.com
             </span>
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-11 w-11 items-center justify-center rounded-md border-2 border-emerald-700 text-emerald-800">
-              <Leaf className="h-6 w-6" />
-            </div>
-            <div className="leading-tight">
-              <span className="block text-xl font-extrabold text-slate-950">Hami</span>
-              <span className="block text-xs font-semibold text-emerald-700">General Dealers</span>
-            </div>
+          <Link href="/" className="flex items-center" aria-label="Hami General Dealers home">
+            <Image
+              src="/images/logo-hami.png"
+              alt="Hami General Dealers"
+              width={80}
+              height={80}
+              priority
+              className="h-16 w-16 object-contain"
+            />
           </Link>
 
           <nav className="hidden items-center gap-5 xl:gap-8 lg:flex">
@@ -62,10 +64,10 @@ export default function Header() {
 
           <div className="hidden items-center gap-3 sm:flex">
             <Link
-              href="/contact"
+              href="/careers"
               className="text-sm font-semibold text-slate-700 transition-colors hover:text-emerald-700"
             >
-              Sign In
+              Join Us
             </Link>
             <Link
               href="/consult"
@@ -98,6 +100,13 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="/careers"
+                onClick={() => setIsOpen(false)}
+                className="rounded-md px-3 py-2 text-sm font-semibold text-slate-700 transition-colors hover:bg-emerald-50 hover:text-emerald-700"
+              >
+                Join Us
+              </Link>
               <Link
                 href="/consult"
                 onClick={() => setIsOpen(false)}

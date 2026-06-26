@@ -19,6 +19,7 @@ export interface OrganizationPageData {
   eyebrow: string
   headline: string
   description: string
+  heroImage?: string
   popular: string[]
   stats: string[]
   categories: Array<{
@@ -89,7 +90,7 @@ export default function OrganizationPage({ data }: { data: OrganizationPageData 
             <div className="relative min-h-[410px]">
               <div className="absolute inset-x-10 bottom-0 h-[82%] rounded-full bg-orange-100" />
               <Image
-                src="/images/hami-hero-professional.png"
+                src={data.heroImage ?? '/images/hami-hero-professional.png'}
                 alt={`${data.name} representative`}
                 fill
                 priority

@@ -1,11 +1,12 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
 export const metadata = {
   title: 'Our Work - Hami General Dealers',
-  description: 'Discover our services, projects, and impact across agriculture and commerce.',
+  description: 'Discover our services across Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motors, IT, and media support.',
 }
 
 export default function OurWork() {
@@ -20,7 +21,7 @@ export default function OurWork() {
               Our Work & Services
             </h1>
             <p className="text-xl text-white/90 max-w-3xl text-balance">
-              Comprehensive solutions across agriculture, commerce, and community development.
+              Comprehensive solutions across agriculture, microfinance, mobility, and community development.
             </p>
           </div>
         </section>
@@ -34,24 +35,24 @@ export default function OurWork() {
                   Agricultural Services
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  We provide end-to-end agricultural solutions from supply to market access, helping farmers maximize yields while practicing sustainability.
+                  We provide agricultural products and services including chicks, vaccines, animal feed, veterinary drugs, poultry support, cattle production support, and farm consultations.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Quality seeds and fertilizers</span>
+                    <span className="text-foreground">Animal feed and stock feed supply</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Expert farming consulting</span>
+                    <span className="text-foreground">Veterinary drugs and services</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Training and capacity building</span>
+                    <span className="text-foreground">Day-old chicks and poultry support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Market access and trading</span>
+                    <span className="text-foreground">Layer and egg production support</span>
                   </li>
                 </ul>
                 <Link
@@ -61,42 +62,50 @@ export default function OurWork() {
                   Learn about Agrovert <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-              <div className="bg-primary/5 rounded-lg h-64 flex items-center justify-center border-2 border-primary/20">
-                <div className="text-center text-muted-foreground">
-                  <p>Agricultural Services Image</p>
-                </div>
+              <div className="relative h-64 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
+                <Image
+                  src="/images/hami-hero-professional.png"
+                  alt="Hami General Dealers agricultural services"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-secondary/5 rounded-lg h-64 flex items-center justify-center border-2 border-secondary/20 md:order-last">
-                <div className="text-center text-muted-foreground">
-                  <p>Commercial Services Image</p>
-                </div>
+              <div className="relative h-64 overflow-hidden rounded-lg border border-secondary/20 bg-secondary/5 md:order-last">
+                <Image
+                  src="/images/hami-about-team.png"
+                  alt="Hami General Dealers commercial services"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                />
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-                  Commercial Solutions
+                  Microfinance Solutions
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Mifi brings quality general merchandise, wholesale trading, and business logistics to partners across the region.
+                  Mifi Business Solutions is a microfinance company specializing in daily loans for customers who need practical short-term financial support.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">General merchandise distribution</span>
+                    <span className="text-foreground">Daily loan services</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Wholesale and retail partnerships</span>
+                    <span className="text-foreground">Microfinance customer support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Import and export services</span>
+                    <span className="text-foreground">Short-term financial support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Business logistics solutions</span>
+                    <span className="text-foreground">Loan processing and repayment coordination</span>
                   </li>
                 </ul>
                 <Link
@@ -125,13 +134,13 @@ export default function OurWork() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  Transforming Small-Scale Farming in Kiambu
+                  Agricultural Inputs for Farmers and Marketeers
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Through our Agrovert division, we provided 500 farmers in Kiambu region with sustainable farming training, quality inputs, and market access, resulting in a 45% increase in yields.
+                  Through Hami Agrovert, we connect farmers and marketeers with chicks, vaccines, feed, veterinary drugs, and farm consultation support.
                 </p>
                 <div className="text-primary font-semibold text-sm">
-                  Impact: 500 farmers, 45% yield increase
+                  Focus: agricultural inputs and timely supply
                 </div>
               </div>
 
@@ -142,13 +151,13 @@ export default function OurWork() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  Sustainable Water Harvesting Initiative
+                  Poultry Farming and Cattle Production
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Implemented water conservation technologies across 200 farms, reducing water usage by 40% while maintaining productivity in drought-prone areas.
+                  Hami Farms supports poultry farming, egg production, and cattle production as core parts of its farm operations.
                 </p>
                 <div className="text-primary font-semibold text-sm">
-                  Impact: 200 farms, 40% water savings
+                  Focus: poultry, cattle, and farm operations
                 </div>
               </div>
 
@@ -159,13 +168,13 @@ export default function OurWork() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  Youth Entrepreneurship Program
+                  IT, Media, and Brand Communication
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Empowered 300 young entrepreneurs through training, mentorship, and access to markets via our Mifi division, creating sustainable livelihoods.
+                  Mipro supports the IT and media perspective of the organization through digital content, communication materials, brand updates, and media coordination.
                 </p>
                 <div className="text-primary font-semibold text-sm">
-                  Impact: 300 youth, sustainable businesses
+                  Focus: IT support, media content, and communication
                 </div>
               </div>
 
@@ -176,13 +185,13 @@ export default function OurWork() {
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">
-                  Organic Certification Support
+                  Direct Supplier Relationships
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  Guided 150 farmers through organic certification process, enabling them to access premium markets and increase income by 60%.
+                  Hami General Dealers builds relationships with manufacturers and source suppliers to reduce unnecessary middlemen and strengthen supply control.
                 </p>
                 <div className="text-primary font-semibold text-sm">
-                  Impact: 150 farmers, 60% income increase
+                  Focus: reliable sourcing and distribution
                 </div>
               </div>
             </div>
@@ -196,28 +205,28 @@ export default function OurWork() {
               Consulting Services
             </h2>
             <p className="text-lg text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-              Our expert consultants provide specialized advice on farming practices, market trends, business strategy, and sustainability.
+              Our team provides practical support on farming practices, agricultural products, supplier coordination, business planning, and customer delivery.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="border border-border rounded-lg p-8">
                 <h3 className="text-lg font-bold text-foreground mb-3">Farming Consultation</h3>
                 <p className="text-muted-foreground mb-4">
-                  Personalized advice on crop selection, soil management, pest control, and optimization strategies tailored to your land and climate.
+                  Practical support on poultry production, cattle production, veterinary products, stock feed, and general farm planning.
                 </p>
               </div>
 
               <div className="border border-border rounded-lg p-8">
                 <h3 className="text-lg font-bold text-foreground mb-3">Business Planning</h3>
                 <p className="text-muted-foreground mb-4">
-                  Strategic planning services to help you develop sustainable business models and expand market reach.
+                  Strategic planning services to help you coordinate operations, customer support, and growth.
                 </p>
               </div>
 
               <div className="border border-border rounded-lg p-8">
                 <h3 className="text-lg font-bold text-foreground mb-3">Sustainability Assessment</h3>
                 <p className="text-muted-foreground mb-4">
-                  Evaluate your operations and get recommendations for environmental conservation and cost efficiency.
+                  Review product needs, sourcing options, and delivery plans to improve reliability and cost efficiency.
                 </p>
               </div>
 

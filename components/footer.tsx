@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { Facebook, Instagram, Linkedin, Mail, Twitter, Youtube, Zap } from 'lucide-react'
+import Image from 'next/image'
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 
 const footerLinks = {
   Organizations: [
@@ -18,11 +19,15 @@ const footerLinks = {
     { href: '/contact', label: 'Contact' },
     { href: '/consult', label: 'Consulting' },
     { href: '/media', label: 'Media' },
+    { href: '/media/photo-gallery', label: 'Photo Gallery' },
+    { href: '/media/videos', label: 'Videos' },
+    { href: '/media/media-kit', label: 'Media Kit' },
+    { href: '/media/press-releases', label: 'Press Releases' },
   ],
   Legal: [
-    { href: '#', label: 'Privacy' },
-    { href: '#', label: 'Terms of Service' },
-    { href: '#', label: 'Cookies' },
+    { href: '/privacy', label: 'Privacy' },
+    { href: '/terms', label: 'Terms of Service' },
+    { href: '/cookies', label: 'Cookies' },
   ],
 }
 
@@ -75,12 +80,17 @@ export default function Footer() {
 
         <div className="grid gap-10 px-2 py-10 md:grid-cols-5 md:px-0">
           <div>
-            <Link href="/" className="inline-flex items-center gap-2 text-lg font-black text-slate-950">
-              <Zap className="h-5 w-5 fill-orange-500 text-orange-500" />
-              Hami General Dealers
+            <Link href="/" className="inline-flex items-center" aria-label="Hami General Dealers home">
+              <Image
+                src="/images/logo-hami.png"
+                alt="Hami General Dealers"
+                width={104}
+                height={104}
+                className="h-20 w-20 object-contain"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
-              Your group for agriculture, commerce, farms, motors, projects, and business solutions.
+              Your group for Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motorbikes, parts, gear, IT, and media support.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {socials.map((social) => {

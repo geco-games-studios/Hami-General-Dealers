@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Leaf, Lightbulb, BookOpen, TrendingUp, Play } from 'lucide-react'
 import { blogPosts, events, services, testimonials, heroVideo } from '@/lib/data'
 import { BlogCard, EventCard, ServiceCard } from './cards'
@@ -21,7 +22,7 @@ export function HeroSection() {
               Building a Better Future in Agriculture & Commerce
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 text-balance">
-              Hami General Dealers leads the way with sustainable solutions through Agrovert, Mifi, and Hami Farms.
+              Hami General Dealers provides eggs, agricultural inputs, animal feed, veterinary drugs and services, printing, design, office supplies, and stationery across Zambia.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
@@ -68,37 +69,40 @@ export function WhoWeAreSection() {
               Who We Are
             </h2>
             <p className="text-lg text-muted-foreground mb-4">
-              Hami General Dealers is a leading organization committed to advancing agriculture and commerce across East Africa.
+              Hami General Dealers is a Zambian-owned enterprise registered in 2015 and committed to reliable agriculture, supply, and commercial service delivery.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Through our three strategic divisions—Agrovert, Mifi, and Hami Farms—we provide comprehensive solutions that empower farmers, businesses, and communities.
+              Through Agrovert, Mifi, and Hami Farms, we support farmers, marketeers, businesses, and communities with products and services built around quality and client satisfaction.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <p className="text-foreground font-medium">Established presence across East Africa</p>
+                <p className="text-foreground font-medium">Registered Zambian business since 2015</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <p className="text-foreground font-medium">Trusted partner to thousands of farmers</p>
+                <p className="text-foreground font-medium">Serving farmers, marketeers, and business customers</p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <p className="text-foreground font-medium">Commitment to innovation and sustainability</p>
+                <p className="text-foreground font-medium">Commitment to quality service and client satisfaction</p>
               </div>
             </div>
           </div>
-          <div className="bg-primary/5 rounded-lg h-96 flex items-center justify-center border-2 border-primary/20">
-            <div className="text-center">
-              <Leaf className="w-24 h-24 text-primary mx-auto mb-4 opacity-50" />
-              <p className="text-muted-foreground">Organization Image</p>
-            </div>
+          <div className="relative h-96 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
+            <Image
+              src="/images/hami-about-team.png"
+              alt="Hami General Dealers team"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
           </div>
         </div>
       </div>
@@ -115,7 +119,7 @@ export function WhatWeDoSection() {
             What We Do
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our services span agriculture, commerce, and consulting to meet the diverse needs of our partners.
+            Our services span Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motors, IT, and media support.
           </p>
         </div>
 
@@ -167,7 +171,7 @@ export function HistorySection() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">2017 - Agrovert Launch</h3>
               <p className="text-muted-foreground">
-                Launched Agrovert to focus specifically on sustainable and eco-friendly agricultural practices.
+                Built Agrovert around chicks, vaccines, drugs, feed, and practical farm consultations.
               </p>
             </div>
           </div>
@@ -180,7 +184,7 @@ export function HistorySection() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">2019 - Expansion</h3>
               <p className="text-muted-foreground">
-                Expanded operations with Hami Farms and Mifi divisions to provide comprehensive solutions.
+                Expanded operations with Hami Farms for poultry and cattle production and Mifi for microfinance daily loans.
               </p>
             </div>
           </div>
@@ -192,7 +196,7 @@ export function HistorySection() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">2024 - Future Forward</h3>
               <p className="text-muted-foreground">
-                Continuing to innovate with modern technology and sustainable practices across all divisions.
+                Continuing to improve farm inputs, poultry and cattle production, daily loan support, motors, and project services.
               </p>
             </div>
           </div>

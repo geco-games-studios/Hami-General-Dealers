@@ -20,24 +20,50 @@ import {
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 
-const categories = ['Overview', 'Agrovert', 'Hami Farms', 'Mifi Business Solutions', 'Hamiz Motors', 'Mipro']
+const categories = [
+  { label: 'Overview', href: '/' },
+  { label: 'Agrovert', href: '/agrovert' },
+  { label: 'Hami Farms', href: '/farms' },
+  { label: 'Mifi Business Solutions', href: '/mifi' },
+  { label: 'Hamiz Motors', href: '/hamiz' },
+  { label: 'Mipro', href: '/mipro' },
+]
 
-const partners = [
-  { name: 'Agrovert', mark: 'Ag', color: 'text-emerald-700' },
-  { name: 'Hami Farms', mark: 'HF', color: 'text-lime-700' },
-  { name: 'Mifi Business Solutions', mark: 'MB', color: 'text-sky-700' },
-  { name: 'Hamiz Motors', mark: 'HM', color: 'text-orange-600' },
-  { name: 'Mipro', mark: 'MP', color: 'text-indigo-700' },
-  { name: 'Hami Consult', mark: 'HC', color: 'text-violet-700' },
-  { name: 'Hami Supplies', mark: 'HS', color: 'text-rose-700' },
-  { name: 'Local Farmers', mark: 'LF', color: 'text-teal-700' },
-  { name: 'Retail Network', mark: 'RN', color: 'text-slate-700' },
+const organizations = [
+  { name: 'Hami General Dealers', mark: 'HGD', color: 'text-emerald-700' },
+  { name: 'Mifi Business Solutions', mark: 'MBS', color: 'text-sky-700' },
+  { name: 'Hamiz Motors and Logistics', mark: 'HML', color: 'text-orange-600' },
+  { name: 'Hami Agrovet', mark: 'HA', color: 'text-lime-700' },
+  { name: 'Hami Farms', mark: 'HF', color: 'text-teal-700' },
+]
+
+const aboutSlides = [
+  {
+    title: 'Agricultural supply',
+    text: 'Chicks, feed, vaccines, veterinary drugs, and farm support through Hami Agrovet.',
+    image: '/images/hami-hero-agro.png',
+  },
+  {
+    title: 'Farm operations',
+    text: 'Poultry farming, cattle production, and practical farm management through Hami Farms.',
+    image: '/images/hami-hero-farm.png',
+  },
+  {
+    title: 'Business finance',
+    text: 'Microfinance services and daily loan support through Mifi Business Solutions.',
+    image: '/images/hami-hero-mifi.png',
+  },
+  {
+    title: 'Motors and logistics',
+    text: 'Motorbikes, parts, rider gear, and mobility support through Hamiz Motors and Logistics.',
+    image: '/images/hami-hero-hamiz.png',
+  },
 ]
 
 const serviceCards = [
   {
-    title: 'Group-wide supply, agriculture, and business support',
-    manager: 'Jason Williams',
+    title: 'Egg production, agricultural supply, and business support',
+    manager: 'Nchimunya iLLute Hamaimbo',
     category: 'Overview',
     icon: Leaf,
     price: 'Active',
@@ -46,8 +72,8 @@ const serviceCards = [
     art: 'from-emerald-200 via-lime-100 to-white',
   },
   {
-    title: 'Sustainable farming inputs and advisory programs',
-    manager: 'Pamela Foster',
+    title: 'Chicks, vaccines, drugs, feed, and consultations',
+    manager: 'Rajesh Ngandu',
     category: 'Agrovert',
     icon: Tractor,
     price: 'Growing',
@@ -56,8 +82,8 @@ const serviceCards = [
     art: 'from-sky-100 via-emerald-100 to-white',
   },
   {
-    title: 'Farm production, planning, and crop operations',
-    manager: 'Rose Simmons',
+    title: 'Poultry farming, cattle production, and farm operations',
+    manager: 'Harison Chooye',
     category: 'Hami Farms',
     icon: ShieldCheck,
     price: 'Managed',
@@ -66,8 +92,8 @@ const serviceCards = [
     art: 'from-amber-100 via-orange-50 to-white',
   },
   {
-    title: 'Retail supply, procurement, and trading network',
-    manager: 'Jason Williams',
+    title: 'Microfinance services specializing in daily loans',
+    manager: 'Miyanda Hamimbo',
     category: 'Mifi Business Solutions',
     icon: TrendingUp,
     price: 'Connected',
@@ -76,8 +102,8 @@ const serviceCards = [
     art: 'from-teal-100 via-cyan-50 to-white',
   },
   {
-    title: 'Vehicle sourcing and motors waiting-list pipeline',
-    manager: 'Jason Williams',
+    title: 'Motorbikes, motorbike parts, clothes, gloves, and boots',
+    manager: 'Queen Chiinda',
     category: 'Hamiz Motors',
     icon: Sparkles,
     price: 'Launching',
@@ -86,8 +112,8 @@ const serviceCards = [
     art: 'from-violet-100 via-fuchsia-50 to-white',
   },
   {
-    title: 'Consulting, partnerships, and growth coordination',
-    manager: 'Jason Williams',
+    title: 'Client support, partnerships, and growth coordination',
+    manager: 'Choolwe Mwiinga',
     category: 'Consulting',
     icon: Sprout,
     price: 'Available',
@@ -96,11 +122,11 @@ const serviceCards = [
     art: 'from-rose-100 via-orange-50 to-white',
   },
   {
-    title: 'Projects, procurement, and delivery coordination',
-    manager: 'Jason Williams',
+    title: 'IT, media, digital content, and brand communication',
+    manager: 'Brighton Mutena',
     category: 'Mipro',
     icon: ShieldCheck,
-    price: 'Coordinating',
+    price: 'Creative',
     oldPrice: '',
     tone: 'bg-indigo-100 text-indigo-800',
     art: 'from-indigo-100 via-sky-50 to-white',
@@ -122,7 +148,7 @@ export default function Home() {
                 Grow from anywhere, and build your brighter business.
               </h1>
               <p className="mt-6 max-w-md text-sm leading-7 text-slate-600">
-                Hami General Dealers brings farm inputs, commercial supply, consulting, and market support together for producers and partners ready to move.
+                Hami General Dealers brings Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motorbikes, parts, rider gear, IT, media, and brand support together for customers ready to move.
               </p>
               <Link
                 href="/consult"
@@ -136,11 +162,11 @@ export default function Home() {
             <div className="relative min-h-[360px] md:min-h-[480px]">
               <div className="absolute left-5 top-16 z-20 hidden rounded-full bg-emerald-700 px-7 py-6 text-center text-white shadow-xl sm:block">
                 <BookOpen className="mx-auto mb-1 h-7 w-7" />
-                <div className="text-2xl font-extrabold">1,235</div>
-                <div className="text-xs font-semibold">projects</div>
+                <div className="text-2xl font-extrabold">2015</div>
+                <div className="text-xs font-semibold">registered</div>
               </div>
               <div className="absolute right-5 top-4 z-20 rounded-full bg-white/90 px-4 py-3 text-center shadow-lg">
-                <div className="text-lg font-extrabold text-emerald-700">4.8</div>
+                <div className="text-lg font-extrabold text-emerald-700">Zambia</div>
                 <div className="flex items-center gap-0.5 text-amber-400">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <Star key={index} className="h-3 w-3 fill-current" />
@@ -148,13 +174,105 @@ export default function Home() {
                 </div>
               </div>
               <Image
-                src="/images/hami-hero-professional.png"
+                src="/images/hami-hero-home.png"
                 alt="Hami General Dealers consultant holding a laptop"
                 fill
                 priority
                 className="object-contain object-bottom"
                 sizes="(min-width: 768px) 55vw, 100vw"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-emerald-700">About Hami</p>
+                <h2 className="mt-4 text-3xl font-extrabold leading-tight text-slate-950 md:text-4xl">
+                  One local group serving farms, families, riders, and businesses.
+                </h2>
+                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-600">
+                  Hami General Dealers connects practical services across agriculture, farm production, finance, motors, logistics, IT, media, and brand support. Each organization serves a clear need while working under one trusted Hami name.
+                </p>
+                <div className="mt-7 grid grid-cols-2 gap-4">
+                  {[
+                    ['2015', 'Registered'],
+                    ['5', 'Organizations'],
+                    ['4+', 'Service areas'],
+                    ['Zambia', 'Based'],
+                  ].map(([value, label]) => (
+                    <div key={label} className="rounded-md border border-emerald-100 bg-[#f6fbf8] p-4">
+                      <div className="text-2xl font-extrabold text-emerald-700">{value}</div>
+                      <div className="mt-1 text-xs font-bold uppercase tracking-wide text-slate-500">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href="/about"
+                  className="mt-8 inline-flex items-center gap-2 rounded-md bg-emerald-700 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-emerald-800"
+                >
+                  Learn About Us
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+
+              <div className="min-w-0">
+                <div className="relative overflow-hidden rounded-md bg-[#eaf8f0]">
+                  <div className="grid gap-5 p-4 sm:grid-cols-[1.1fr_0.9fr] sm:p-5">
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-white">
+                      <Image
+                        src="/images/hami-about-team.png"
+                        alt="Hami General Dealers team"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 1024px) 42vw, 100vw"
+                      />
+                    </div>
+                    <div className="grid gap-5">
+                      <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-white">
+                        <Image
+                          src="/images/hami-hero-home.png"
+                          alt="Hami General Dealers service representative"
+                          fill
+                          className="object-contain object-bottom"
+                          sizes="(min-width: 1024px) 26vw, 100vw"
+                        />
+                      </div>
+                      <div className="rounded-md bg-white p-5 shadow-sm">
+                        <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-emerald-700">Quality goods and services</p>
+                        <p className="mt-3 text-sm leading-6 text-slate-600">
+                          Bringing practical support closer to your doorstep.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 flex snap-x gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                  {aboutSlides.map((slide) => (
+                    <article
+                      key={slide.title}
+                      className="min-w-[260px] snap-start overflow-hidden rounded-md border border-slate-100 bg-white shadow-sm sm:min-w-[300px]"
+                    >
+                      <div className="relative aspect-[4/3] bg-[#f6fbf8]">
+                        <Image
+                          src={slide.image}
+                          alt={slide.title}
+                          fill
+                          className="object-contain object-bottom"
+                          sizes="300px"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-extrabold text-slate-950">{slide.title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-slate-500">{slide.text}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -187,16 +305,17 @@ export default function Home() {
               </button>
               <div className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
                 {categories.map((category, index) => (
-                  <button
-                    key={category}
-                    className={`h-11 rounded-md border px-3 text-sm font-semibold transition-colors ${
+                  <Link
+                    key={category.label}
+                    href={category.href}
+                    className={`flex h-11 items-center justify-center rounded-md border px-3 text-center text-sm font-semibold transition-colors ${
                       index === 0
                         ? 'border-emerald-700 bg-white text-emerald-800'
                         : 'border-transparent bg-white/80 text-slate-700 hover:border-emerald-300'
                     }`}
                   >
-                    {category}
-                  </button>
+                    {category.label}
+                  </Link>
                 ))}
               </div>
               <button className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-slate-600 shadow-sm" aria-label="Next category">
@@ -206,16 +325,8 @@ export default function Home() {
 
             <div className="mt-10 grid gap-7 md:grid-cols-2 lg:grid-cols-3">
               {serviceCards.map((service) => {
-                const Icon = service.icon
-
                 return (
-                  <article key={service.title} className="overflow-hidden rounded-md border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                    <div className={`relative flex aspect-[1.55] items-center justify-center bg-gradient-to-br ${service.art}`}>
-                      <div className="absolute inset-x-5 bottom-5 h-10 rounded-full bg-white/45 blur-xl" />
-                      <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white text-emerald-700 shadow-lg">
-                        <Icon className="h-11 w-11" />
-                      </div>
-                    </div>
+                  <article key={service.title} className="rounded-md border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
                     <div className="p-5">
                       <div className="mb-4 flex items-center justify-between gap-3">
                         <div className="flex items-center gap-2">
@@ -232,11 +343,11 @@ export default function Home() {
                       <div className="mt-4 flex items-center justify-between border-b border-slate-100 pb-4 text-xs text-slate-500">
                         <span className="inline-flex items-center gap-1">
                           <Clock3 className="h-3.5 w-3.5 text-emerald-700" />
-                          08 hr 15 min
+                          Timely delivery
                         </span>
                         <span className="inline-flex items-center gap-1">
                           <Users className="h-3.5 w-3.5 text-emerald-700" />
-                          29 partners
+                          Farmers & marketeers
                         </span>
                       </div>
                       <div className="mt-4 flex items-center justify-between">
@@ -282,7 +393,7 @@ export default function Home() {
                 Join the Waiting List for Hamiz Motors
               </h2>
               <p className="mt-5 max-w-md text-sm leading-7 text-slate-600">
-                Be first to hear about vehicle sourcing, sales updates, and launch offers from Hamiz Motors.
+                Be first to hear about motorbikes, parts, riding clothes, gloves, boots, and Hamiz Motors offers.
               </p>
             </div>
 
@@ -332,21 +443,21 @@ export default function Home() {
         <section className="bg-white py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-emerald-700">Our Partners</p>
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-emerald-700">Our Organizations</p>
               <h2 className="mt-4 text-3xl font-extrabold text-slate-950 md:text-4xl">
-                We work with the best partners
+                Our group of organizations
               </h2>
             </div>
 
-            <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {partners.map((partner) => (
+            <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+              {organizations.map((organization) => (
                 <div
-                  key={partner.name}
+                  key={organization.name}
                   className="flex h-20 items-center justify-center rounded-md border border-slate-100 bg-white px-5 shadow-[0_12px_35px_rgba(15,23,42,0.07)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(15,23,42,0.11)]"
                 >
                   <div className="flex min-w-0 items-center gap-3">
-                    <span className={`text-xl font-black ${partner.color}`}>{partner.mark}</span>
-                    <span className="truncate text-base font-extrabold text-slate-800">{partner.name}</span>
+                    <span className={`text-xl font-black ${organization.color}`}>{organization.mark}</span>
+                    <span className="truncate text-base font-extrabold text-slate-800">{organization.name}</span>
                   </div>
                 </div>
               ))}
