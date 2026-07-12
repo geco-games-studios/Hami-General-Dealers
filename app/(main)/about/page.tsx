@@ -110,7 +110,7 @@ export default function About() {
       <main>
         <section className="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-slate-950 text-white">
           <Image
-            src="/images/hami-about-team.png"
+            src="/images/team-1.jpeg"
             alt="Hami General Dealers team planning together"
             fill
             priority
@@ -167,7 +167,7 @@ export default function About() {
             <div className="relative mt-16 max-w-5xl">
               <div className="relative aspect-[1.65] overflow-hidden rounded-md bg-slate-100 shadow-sm md:w-[72%]">
                 <Image
-                  src="/images/hami-about-team.png"
+                  src="/images/team-1.jpeg"
                   alt="Hami General Dealers team collaboration"
                   fill
                   className="object-cover"

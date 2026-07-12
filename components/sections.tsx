@@ -97,7 +97,7 @@ export function WhoWeAreSection() {
           </div>
           <div className="relative h-96 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
             <Image
-              src="/images/hami-about-team.png"
+              src="/images/team-1.jpeg"
               alt="Hami General Dealers team"
               fill
               className="object-cover"

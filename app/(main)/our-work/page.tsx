@@ -76,7 +76,7 @@ export default function OurWork() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-64 overflow-hidden rounded-lg border border-secondary/20 bg-secondary/5 md:order-last">
                 <Image
-                  src="/images/hami-about-team.png"
+                  src="/images/team-1.jpeg"
                   alt="Hami General Dealers commercial services"
                   fill
                   className="object-cover"

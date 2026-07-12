@@ -30,11 +30,11 @@ const categories = [
 ]
 
 const organizations = [
-  { name: 'Hami General Dealers', mark: 'HGD', color: 'text-emerald-700' },
-  { name: 'Mifi Business Solutions', mark: 'MBS', color: 'text-sky-700' },
-  { name: 'Hamiz Motors and Logistics', mark: 'HML', color: 'text-orange-600' },
-  { name: 'Hami Agrovet', mark: 'HA', color: 'text-lime-700' },
-  { name: 'Hami Farms', mark: 'HF', color: 'text-teal-700' },
+  { name: 'Hami General Dealers', mark: 'HGD', plainText: 'HGD - Hami General Dealers', color: 'text-emerald-700' },
+  { name: 'Mifi Business Solutions', mark: 'MBS', plainText: 'MBS - Mifi Business Solutions', color: 'text-sky-700' },
+  { name: 'Hamiz Motors and Logistics', mark: 'HML', plainText: 'HML - Hamiz Motors and Logistics', color: 'text-orange-600' },
+  { name: 'Hami Agrovet', mark: 'HA', plainText: 'HA - Hami Agrovet', color: 'text-lime-700' },
+  { name: 'Hami Farms', mark: 'HF', plainText: 'HF - Hami Farms', color: 'text-teal-700' },
 ]
 
 const aboutSlides = [
@@ -223,7 +223,7 @@ export default function Home() {
                   <div className="grid gap-5 p-4 sm:grid-cols-[1.1fr_0.9fr] sm:p-5">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-white">
                       <Image
-                        src="/images/hami-about-team.png"
+                        src="/images/team-1.jpeg"
                         alt="Hami General Dealers team"
                         fill
                         className="object-cover"
@@ -453,11 +453,12 @@ export default function Home() {
               {organizations.map((organization) => (
                 <div
                   key={organization.name}
-                  className="flex h-20 items-center justify-center rounded-md border border-slate-100 bg-white px-5 shadow-[0_12px_35px_rgba(15,23,42,0.07)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(15,23,42,0.11)]"
+                  className="flex min-h-28 items-center justify-center rounded-md border border-slate-100 bg-white px-4 py-5 text-center shadow-[0_12px_35px_rgba(15,23,42,0.07)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(15,23,42,0.11)]"
                 >
-                  <div className="flex min-w-0 items-center gap-3">
+                  <div className="min-w-0">
                     <span className={`text-xl font-black ${organization.color}`}>{organization.mark}</span>
-                    <span className="truncate text-base font-extrabold text-slate-800">{organization.name}</span>
+                    <p className="mt-1 text-sm font-extrabold leading-5 text-slate-800">{organization.name}</p>
+                    <p className="mt-2 text-xs leading-5 text-slate-500">{organization.plainText}</p>
                   </div>
                 </div>
               ))}

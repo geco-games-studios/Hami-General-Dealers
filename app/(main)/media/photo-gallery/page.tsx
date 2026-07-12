@@ -8,7 +8,7 @@ export const metadata = {
 }
 
 const photos = [
-  { title: 'Hami General Dealers', src: '/images/hami-about-team.png' },
+  { title: 'Hami General Dealers', src: '/images/team-1.jpeg' },
   { title: 'Hami Agrovet', src: '/images/hami-hero-agro.png' },
   { title: 'Hami Farms', src: '/images/hami-hero-farm.png' },
   { title: 'Mifi Business Solutions', src: '/images/hami-hero-mifi.png' },
