@@ -177,7 +177,7 @@ export default function About() {
               <div className="mt-6 overflow-hidden rounded-md bg-white shadow-[0_18px_50px_rgba(15,23,42,0.18)] md:absolute md:right-0 md:top-20 md:mt-0 md:w-[43%]">
                 <div className="relative aspect-video">
                   <Image
-                    src="/images/hami-hero-professional.png"
+                    src="/images/video-cover-1.jpeg"
                     alt="Hami General Dealers professional consultant"
                     fill
                     className="object-cover"

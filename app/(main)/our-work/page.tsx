@@ -64,7 +64,7 @@ export default function OurWork() {
               </div>
               <div className="relative h-64 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
                 <Image
-                  src="/images/hami-hero-professional.png"
+                  src="/images/video-cover-1.jpeg"
                   alt="Hami General Dealers agricultural services"
                   fill
                   className="object-cover"

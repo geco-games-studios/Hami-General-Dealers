@@ -104,6 +104,7 @@ export const organizationPages: Record<string, OrganizationPageData> = {
   mipro: {
     name: 'Mipro',
     eyebrow: 'Mipro',
+    heroImage: '/images/video-cover-1.jpeg',
     headline: 'IT, media, and digital communication support',
     description: 'Mipro is the IT and Media perspective of the organization, supporting digital systems, creative content, brand communication, and media coordination across Hami initiatives.',
     popular: ['IT support', 'Media production', 'Digital communication'],
