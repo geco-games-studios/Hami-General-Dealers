@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import teamImage from '@/public/images/team-1.jpeg'
 import { ArrowRight, Leaf, Lightbulb, BookOpen, TrendingUp, Play } from 'lucide-react'
 import { blogPosts, events, services, testimonials, heroVideo } from '@/lib/data'
 import { BlogCard, EventCard, ServiceCard } from './cards'
@@ -97,7 +98,7 @@ export function WhoWeAreSection() {
           </div>
           <div className="relative h-96 overflow-hidden rounded-lg border border-primary/20 bg-primary/5">
             <Image
-              src="/images/team-1.jpeg"
+              src={teamImage}
               alt="Hami General Dealers team"
               fill
               className="object-cover"

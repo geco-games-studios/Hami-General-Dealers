@@ -1,6 +1,7 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Image from 'next/image'
+import teamImage from '@/public/images/team-1.jpeg'
 
 export const metadata = {
   title: 'Photo Gallery - Hami General Dealers',
@@ -8,7 +9,7 @@ export const metadata = {
 }
 
 const photos = [
-  { title: 'Hami General Dealers', src: '/images/team-1.jpeg' },
+  { title: 'Hami General Dealers', src: teamImage },
   { title: 'Hami Agrovet', src: '/images/hami-hero-agro.png' },
   { title: 'Hami Farms', src: '/images/hami-hero-farm.png' },
   { title: 'Mifi Business Solutions', src: '/images/hami-hero-mifi.png' },

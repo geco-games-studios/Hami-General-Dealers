@@ -82,6 +82,29 @@ export const organizationPages: Record<string, OrganizationPageData> = {
     headline: 'Motorbikes, parts, and rider gear',
     description: 'Hamiz Motors sells motorbikes, motorbike parts, and riding materials including clothes, gloves, boots, and related gear.',
     heroImage: '/images/hami-hero-hamiz.png',
+    // Save product photos in public/images/hamiz, then set each src below
+    // to its public path, e.g. '/images/hamiz/motorbike-1.jpg'.
+    // Update alt with the product name. Add more entries for more photos.
+    galleries: [
+      {
+        title: 'Motorbikes',
+        description: 'Explore motorbikes from Hamiz Motors. Contact our team for models and availability.',
+        images: [
+          { src: '', alt: 'Motorbike 1' },
+          { src: '', alt: 'Motorbike 2' },
+          { src: '', alt: 'Motorbike 3' },
+        ],
+      },
+      {
+        title: 'Spare Parts',
+        description: 'Find motorbike spare parts. Contact our team for compatibility and availability.',
+        images: [
+          { src: '', alt: 'Spare part 1' },
+          { src: '', alt: 'Spare part 2' },
+          { src: '', alt: 'Spare part 3' },
+        ],
+      },
+    ],
     popular: ['Motorbikes', 'Motorbike parts', 'Rider gear'],
     stats: ['Bike sales', 'Parts supply', 'Gear support'],
     employerTitle: 'For Buyers',

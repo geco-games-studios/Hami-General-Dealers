@@ -2,6 +2,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Link from 'next/link'
 import Image from 'next/image'
+import teamImage from '@/public/images/team-1.jpeg'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
 export const metadata = {
@@ -76,7 +77,7 @@ export default function OurWork() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="relative h-64 overflow-hidden rounded-lg border border-secondary/20 bg-secondary/5 md:order-last">
                 <Image
-                  src="/images/team-1.jpeg"
+                  src={teamImage}
                   alt="Hami General Dealers commercial services"
                   fill
                   className="object-cover"

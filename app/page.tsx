@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import teamImage from '@/public/images/team-1.jpeg'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -223,7 +224,7 @@ export default function Home() {
                   <div className="grid gap-5 p-4 sm:grid-cols-[1.1fr_0.9fr] sm:p-5">
                     <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-white">
                       <Image
-                        src="/images/team-1.jpeg"
+                        src={teamImage}
                         alt="Hami General Dealers team"
                         fill
                         className="object-cover"

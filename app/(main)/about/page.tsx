@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import teamImage from '@/public/images/team-1.jpeg'
 import Link from 'next/link'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
@@ -55,6 +56,16 @@ const directors = [
 
 const managementTeam = [
   {
+    name: 'Abestol Kaleya',
+    role: 'Projects Officer',
+    image: null,
+  },
+  {
+    name: 'Elliat Choolwe Mazila',
+    role: 'Hamiz Manager',
+    image: null,
+  },
+  {
     name: 'Dyabbu Hikande',
     role: 'General Manager',
     image: '/images/Dyabbu-Hikande.png',
@@ -110,7 +121,7 @@ export default function About() {
       <main>
         <section className="relative flex min-h-[320px] items-center justify-center overflow-hidden bg-slate-950 text-white">
           <Image
-            src="/images/team-1.jpeg"
+            src={teamImage}
             alt="Hami General Dealers team planning together"
             fill
             priority
@@ -167,7 +178,7 @@ export default function About() {
             <div className="relative mt-16 max-w-5xl">
               <div className="relative aspect-[1.65] overflow-hidden rounded-md bg-slate-100 shadow-sm md:w-[72%]">
                 <Image
-                  src="/images/team-1.jpeg"
+                  src={teamImage}
                   alt="Hami General Dealers team collaboration"
                   fill
                   className="object-cover"
@@ -252,13 +263,17 @@ export default function About() {
                 {managementTeam.map((member, index) => (
                   <article key={member.name} className="overflow-hidden rounded-md bg-white text-center shadow-sm">
                     <div className="relative aspect-[5/7] bg-slate-100">
-                      <Image
+                      {member.image ? <Image
                         src={member.image}
                         alt={member.name}
                         fill
                         className="object-cover object-top"
                         sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      />
+                      /> : (
+                        <div className="flex h-full items-center justify-center text-6xl font-bold text-emerald-700" aria-hidden="true">
+                          {member.name.split(' ').map((name) => name[0]).join('')}
+                        </div>
+                      )}
                     </div>
                     <div className="min-h-24 bg-emerald-700 px-4 py-4 text-white">
                       <h4 className="font-extrabold">{member.name}</h4>

@@ -6,6 +6,7 @@ import {
   BriefcaseBusiness,
   CheckCircle2,
   CircleDollarSign,
+  ImageIcon,
   MapPin,
   Search,
   Settings,
@@ -20,6 +21,11 @@ export interface OrganizationPageData {
   headline: string
   description: string
   heroImage?: string
+  galleries?: Array<{
+    title: string
+    description: string
+    images: Array<{ src: string; alt: string }>
+  }>
   popular: string[]
   stats: string[]
   categories: Array<{
@@ -171,6 +177,32 @@ export default function OrganizationPage({ data }: { data: OrganizationPageData 
             </div>
           </div>
         </section>
+
+        {data.galleries?.map((gallery) => (
+          <section key={gallery.title} className="bg-[#edf7f3] py-12 md:py-16">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-black text-slate-950 md:text-3xl">{gallery.title}</h2>
+              <p className="mt-2 text-sm text-slate-600">{gallery.description}</p>
+              <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {gallery.images.map((photo, index) => (
+                  <figure key={`${gallery.title}-${index}`} className="overflow-hidden rounded-md border border-emerald-100 bg-white shadow-sm">
+                    <div className="relative aspect-[4/3]">
+                      {photo.src ? (
+                        <Image src={photo.src} alt={photo.alt} fill className="object-contain p-4" sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" />
+                      ) : (
+                        <div className="flex h-full flex-col items-center justify-center gap-3 bg-emerald-50/50 text-emerald-700">
+                          <ImageIcon className="h-10 w-10" aria-hidden="true" />
+                          <span className="text-sm font-semibold">Photos coming soon</span>
+                        </div>
+                      )}
+                    </div>
+                    {photo.src && <figcaption className="border-t border-emerald-50 px-5 py-4 text-sm font-bold text-slate-800">{photo.alt}</figcaption>}
+                  </figure>
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
 
         <section className="bg-white py-12 md:py-20">
           <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

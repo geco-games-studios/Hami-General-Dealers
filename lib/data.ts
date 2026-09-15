@@ -260,6 +260,24 @@ export const teamMembers: TeamMember[] = [
     department: 'Farms',
     role: 'manager',
   },
+  {
+    id: '12',
+    name: 'Abestol Kaleya',
+    title: 'Projects Officer',
+    bio: '',
+    image: '',
+    department: 'Projects',
+    role: 'manager',
+  },
+  {
+    id: '13',
+    name: 'Elliat Choolwe Mazila',
+    title: 'Hamiz Manager',
+    bio: '',
+    image: '',
+    department: 'Hamiz',
+    role: 'manager',
+  },
 ]
 
 // Services
