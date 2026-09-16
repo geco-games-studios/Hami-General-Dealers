@@ -2,8 +2,8 @@ import OrganizationPage from '@/components/organization-page'
 import { organizationPages } from '@/lib/organization-pages'
 
 export const metadata = {
-  title: 'Mifi Business Solutions - Microfinance & Daily Loans',
-  description: 'Discover Mifi Business Solutions, a microfinance company specializing in daily loans.',
+  title: 'Mifi Goods and Supply - Goods and Supply',
+  description: 'Discover Mifi Goods and Supply, providing practical goods, sourcing, and distribution support.',
 }
 
 export default function Mifi() {

@@ -11,7 +11,7 @@ const videos = [
   'Company overview',
   'Hami Agrovet product support',
   'Hami Farms operations',
-  'Mifi Business Solutions customer support',
+  'Mifi Goods and Supply agent support',
 ]
 
 export default function Videos() {

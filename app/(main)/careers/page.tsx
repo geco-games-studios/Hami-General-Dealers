@@ -10,7 +10,7 @@ export const metadata = {
 const interestAreas = [
   'Agricultural inputs and Agrovet support',
   'Farm operations and livestock production',
-  'Microfinance and customer service',
+  'Goods supply and agent service',
   'Motors, logistics, and parts support',
   'Administration, sales, marketing, and projects',
 ]

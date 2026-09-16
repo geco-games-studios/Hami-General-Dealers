@@ -193,7 +193,7 @@ export default function Contact() {
                   Distribution support across Zambia
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Serving farmers, marketeers, Agrovert customers, and general supply clients.
+                  Serving farmers, marketeers, Agrovert customers, and general supply agents.
                 </p>
               </div>
             </div>

@@ -81,7 +81,7 @@ export default function OrganizationPage({ data }: { data: OrganizationPageData 
               </div>
 
               <div className="mt-14">
-                <p className="text-sm font-semibold text-slate-500">Trusted by leading partners and clients</p>
+                <p className="text-sm font-semibold text-slate-500">Trusted by leading partners and agents</p>
                 <div className="mt-4 flex flex-wrap gap-5 text-sm font-black text-slate-800">
                   {data.stats.map((stat) => (
                     <span key={stat} className="inline-flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function OrganizationPage({ data }: { data: OrganizationPageData 
                 <span className="text-sm font-extrabold text-slate-800">Opportunity Alert</span>
               </div>
               <div className="absolute bottom-16 right-2 rounded-md bg-white px-5 py-4 shadow-xl sm:right-10">
-                <div className="text-sm font-black text-slate-900">5k+ clients connected</div>
+                <div className="text-sm font-black text-slate-900">5k+ agents connected</div>
                 <div className="mt-3 flex -space-x-2">
                   {['HG', 'AG', 'MF', 'HM'].map((item) => (
                     <span key={item} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-emerald-100 text-[10px] font-black text-emerald-800">

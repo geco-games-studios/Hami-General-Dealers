@@ -6,7 +6,7 @@ const footerLinks = {
   Organizations: [
     { href: '/agrovert', label: 'Agrovert' },
     { href: '/farms', label: 'Hami Farms' },
-    { href: '/mifi', label: 'Mifi Business Solutions' },
+    { href: '/mifi', label: 'Mifi Goods and Supply' },
     { href: '/hamiz', label: 'Hamiz Motors' },
     { href: '/mipro', label: 'Mipro' },
   ],
@@ -90,7 +90,7 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
-              Your group for Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motorbikes, parts, gear, IT, and media support.
+              Your group for Agrovert farm inputs, poultry and cattle production, goods supply, motorbikes, parts, gear, IT, and media support.
             </p>
             <div className="mt-6 flex items-center gap-3">
               {socials.map((social) => {

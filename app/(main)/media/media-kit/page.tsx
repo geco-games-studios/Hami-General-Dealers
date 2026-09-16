@@ -12,7 +12,7 @@ const facts = [
   ['Company', 'Hami General Dealers'],
   ['Registered', '2015'],
   ['Base', 'Lusaka, Zambia'],
-  ['Focus', 'Agriculture, microfinance, farms, motors, logistics, IT, and media'],
+  ['Focus', 'Agriculture, goods supply, farms, motors, logistics, IT, and media'],
 ]
 
 export default function MediaKit() {

@@ -12,7 +12,7 @@ const photos = [
   { title: 'Hami General Dealers', src: teamImage },
   { title: 'Hami Agrovet', src: '/images/hami-hero-agro.png' },
   { title: 'Hami Farms', src: '/images/hami-hero-farm.png' },
-  { title: 'Mifi Business Solutions', src: '/images/hami-hero-mifi.png' },
+  { title: 'Mifi Goods and Supply', src: '/images/hami-hero-mifi.png' },
   { title: 'Hamiz Motors and Logistics', src: '/images/hami-hero-hamiz.png' },
   { title: 'Customer Support', src: '/images/hami-hero-home.png' },
 ]

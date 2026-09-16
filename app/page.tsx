@@ -25,14 +25,14 @@ const categories = [
   { label: 'Overview', href: '/' },
   { label: 'Agrovert', href: '/agrovert' },
   { label: 'Hami Farms', href: '/farms' },
-  { label: 'Mifi Business Solutions', href: '/mifi' },
+  { label: 'Mifi Goods and Supply', href: '/mifi' },
   { label: 'Hamiz Motors', href: '/hamiz' },
   { label: 'Mipro', href: '/mipro' },
 ]
 
 const organizations = [
   { name: 'Hami General Dealers', mark: 'HGD', plainText: 'HGD - Hami General Dealers', color: 'text-emerald-700' },
-  { name: 'Mifi Business Solutions', mark: 'MBS', plainText: 'MBS - Mifi Business Solutions', color: 'text-sky-700' },
+  { name: 'Mifi Goods and Supply', mark: 'MGS', plainText: 'MGS - Mifi Goods and Supply', color: 'text-sky-700' },
   { name: 'Hamiz Motors and Logistics', mark: 'HML', plainText: 'HML - Hamiz Motors and Logistics', color: 'text-orange-600' },
   { name: 'Hami Agrovet', mark: 'HA', plainText: 'HA - Hami Agrovet', color: 'text-lime-700' },
   { name: 'Hami Farms', mark: 'HF', plainText: 'HF - Hami Farms', color: 'text-teal-700' },
@@ -51,7 +51,7 @@ const aboutSlides = [
   },
   {
     title: 'Business finance',
-    text: 'Microfinance services and daily loan support through Mifi Business Solutions.',
+    text: 'Practical goods, sourcing, and distribution through Mifi Goods and Supply.',
     image: '/images/hami-hero-mifi.png',
   },
   {
@@ -93,9 +93,9 @@ const serviceCards = [
     art: 'from-amber-100 via-orange-50 to-white',
   },
   {
-    title: 'Microfinance services specializing in daily loans',
+    title: 'Goods sourcing and supply for everyday needs',
     manager: 'Miyanda Hamimbo',
-    category: 'Mifi Business Solutions',
+    category: 'Mifi Goods and Supply',
     icon: TrendingUp,
     price: 'Connected',
     oldPrice: '',
@@ -113,7 +113,7 @@ const serviceCards = [
     art: 'from-violet-100 via-fuchsia-50 to-white',
   },
   {
-    title: 'Client support, partnerships, and growth coordination',
+    title: 'Agent support, partnerships, and growth coordination',
     manager: 'Choolwe Mwiinga',
     category: 'Consulting',
     icon: Sprout,
@@ -149,7 +149,7 @@ export default function Home() {
                 Grow from anywhere, and build your brighter business.
               </h1>
               <p className="mt-6 max-w-md text-sm leading-7 text-slate-600">
-                Hami General Dealers brings Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motorbikes, parts, rider gear, IT, media, and brand support together for customers ready to move.
+                Hami General Dealers brings Agrovert farm inputs, poultry and cattle production, goods supply, motorbikes, parts, rider gear, IT, media, and brand support together for customers ready to move.
               </p>
               <Link
                 href="/consult"
@@ -476,7 +476,7 @@ export default function Home() {
                 <div>
                   <p className="text-sm font-semibold text-emerald-700">Become A Partner</p>
                   <h2 className="mt-3 text-2xl font-extrabold leading-tight text-slate-950 md:text-3xl">
-                    You can grow with Hami as a supplier or client?
+                    You can grow with Hami as a supplier or agent?
                   </h2>
                   <div className="mt-1 h-4 w-36 rounded-full border-b-2 border-emerald-700" />
                 </div>

@@ -128,7 +128,7 @@ export default function Team() {
               <div className="bg-white rounded-lg p-8 border border-border">
                 <h3 className="text-xl font-bold text-foreground mb-4">Impact Driven</h3>
                 <p className="text-muted-foreground">
-                  Every team member is committed to creating positive change through agriculture, microfinance, motors, IT, and media support.
+                  Every team member is committed to creating positive change through agriculture, goods supply, motors, IT, and media support.
                 </p>
               </div>
             </div>

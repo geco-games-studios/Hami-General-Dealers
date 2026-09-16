@@ -73,7 +73,7 @@ export function WhoWeAreSection() {
               Hami General Dealers is a Zambian-owned enterprise registered in 2015 and committed to reliable agriculture, supply, and commercial service delivery.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Through Agrovert, Mifi, and Hami Farms, we support farmers, marketeers, businesses, and communities with products and services built around quality and client satisfaction.
+              Through Agrovert, Mifi, and Hami Farms, we support farmers, marketeers, businesses, and communities with products and services built around quality and agent satisfaction.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3">
@@ -92,7 +92,7 @@ export function WhoWeAreSection() {
                 <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
                   <div className="w-2 h-2 rounded-full bg-primary"></div>
                 </div>
-                <p className="text-foreground font-medium">Commitment to quality service and client satisfaction</p>
+                <p className="text-foreground font-medium">Commitment to quality service and agent satisfaction</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function WhatWeDoSection() {
             What We Do
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our services span Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motors, IT, and media support.
+            Our services span Agrovert farm inputs, poultry and cattle production, goods supply, motors, IT, and media support.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ export function HistorySection() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">2019 - Expansion</h3>
               <p className="text-muted-foreground">
-                Expanded operations with Hami Farms for poultry and cattle production and Mifi for microfinance daily loans.
+                Expanded operations with Hami Farms for poultry and cattle production and Mifi for goods supply.
               </p>
             </div>
           </div>
@@ -197,7 +197,7 @@ export function HistorySection() {
             <div className="flex-grow">
               <h3 className="text-xl font-bold text-primary mb-2">2024 - Future Forward</h3>
               <p className="text-muted-foreground">
-                Continuing to improve farm inputs, poultry and cattle production, daily loan support, motors, and project services.
+                Continuing to improve farm inputs, poultry and cattle production, goods supply, motors, and project services.
               </p>
             </div>
           </div>

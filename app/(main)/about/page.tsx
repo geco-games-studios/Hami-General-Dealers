@@ -36,7 +36,7 @@ const strengths = [
   },
   {
     title: 'Professional Team',
-    description: 'A hands-on group serving farmers, suppliers, clients, and communities.',
+    description: 'A hands-on group serving farmers, suppliers, agents, and communities.',
     icon: Users,
   },
 ]
@@ -45,7 +45,7 @@ const directors = [
   {
     name: 'Nchimunya iLLute Hamaimbo',
     role: 'Chief Executive Director',
-    image: '/images/Nchimunya-iLute-Hamaimbo.png',
+    image: '/images/Nchimunya-iLute-Hamaimbo.png?v=36de6225',
   },
   {
     name: 'Miyanda Hamimbo',
@@ -73,7 +73,7 @@ const managementTeam = [
   {
     name: 'Choolwe Mwiinga',
     role: 'Executive Business Officer',
-    image: '/images/Choolwe-Mwiinga.png',
+    image: '/images/Choolwe-Mwiinga.png?v=643f433d',
   },
   {
     name: 'Judith Hankombo',
@@ -93,7 +93,7 @@ const managementTeam = [
   {
     name: 'Wendy Maimbo',
     role: 'IT, Sales and Marketing Manager',
-    image: '/images/Wendy-Maimbo.png',
+    image: '/images/Wendy-Maimbo.png?v=cdedb0bf',
   },
   {
     name: 'Rajesh Ngandu',
@@ -320,7 +320,7 @@ export default function About() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
               {[
                 ['Hami Agrovert', 'Chicks, vaccines, drugs, feed, and consultations.', '/agrovert', Leaf],
-                ['Mifi Business Solutions', 'Microfinance services specializing in daily loans.', '/mifi', ShieldCheck],
+                ['Mifi Goods and Supply', 'Practical goods, sourcing, and distribution support.', '/mifi', ShieldCheck],
                 ['Hami Farms', 'Poultry farming and cattle production.', '/farms', CheckCircle2],
                 ['Hamiz Motors', 'Motorbikes, parts, riding clothes, gloves, and boots.', '/hamiz', BriefcaseBusiness],
                 ['Mipro', 'IT, media, digital content, and brand communication.', '/mipro', Users],

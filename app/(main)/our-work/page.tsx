@@ -7,7 +7,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react'
 
 export const metadata = {
   title: 'Our Work - Hami General Dealers',
-  description: 'Discover our services across Agrovert farm inputs, poultry and cattle production, microfinance daily loans, motors, IT, and media support.',
+  description: 'Discover our services across Agrovert farm inputs, poultry and cattle production, goods supply, motors, IT, and media support.',
 }
 
 export default function OurWork() {
@@ -22,7 +22,7 @@ export default function OurWork() {
               Our Work & Services
             </h1>
             <p className="text-xl text-white/90 max-w-3xl text-balance">
-              Comprehensive solutions across agriculture, microfinance, mobility, and community development.
+              Comprehensive solutions across agriculture, goods supply, mobility, and community development.
             </p>
           </div>
         </section>
@@ -86,27 +86,27 @@ export default function OurWork() {
               </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-                  Microfinance Solutions
+                  Goods and Supply
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Mifi Business Solutions is a microfinance company specializing in daily loans for customers who need practical short-term financial support.
+                  Mifi Goods and Supply sources and supplies practical goods for agents, businesses, and communities.
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Daily loan services</span>
+                    <span className="text-foreground">Goods supply services</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Microfinance customer support</span>
+                    <span className="text-foreground">Product sourcing support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Short-term financial support</span>
+                    <span className="text-foreground">Distribution support</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-foreground">Loan processing and repayment coordination</span>
+                    <span className="text-foreground">Order handling and delivery coordination</span>
                   </li>
                 </ul>
                 <Link
