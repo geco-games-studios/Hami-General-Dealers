@@ -97,7 +97,7 @@ export default function OrganizationPage({ data }: { data: OrganizationPageData 
               <div className="absolute inset-x-10 bottom-0 h-[82%] rounded-full bg-orange-100" />
               <Image
                 src={data.heroImage ?? '/images/hami-hero-professional.png'}
-                alt={`${data.name} representative`}
+                alt={data.heroImage?.endsWith(".svg") ? `${data.name} motorbike` : `${data.name} representative`}
                 fill
                 priority
                 className="object-contain object-bottom"

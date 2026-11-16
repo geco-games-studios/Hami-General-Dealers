@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+  <!-- Hamiz Motors hero: motorbike illustration (no person) -->
+  <defs>
+    <linearGradient id="tank" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+    <linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#94a3b8"/>
+    </linearGradient>
+    <radialGradient id="shadow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#0f172a" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="450" cy="842" rx="400" ry="34" fill="url(#shadow)"/>
+
+  <!-- rear wheel -->
+  <g transform="translate(215 715)">
+    <circle r="125" fill="#0f172a"/>
+    <circle r="98" fill="#1e293b"/>
+    <circle r="78" fill="none" stroke="url(#chrome)" stroke-width="8"/>
+    <g stroke="#94a3b8" stroke-width="7" stroke-linecap="round">
+      <line x1="0" y1="-76" x2="0" y2="76"/>
+      <line x1="-76" y1="0" x2="76" y2="0"/>
+      <line x1="-54" y1="-54" x2="54" y2="54"/>
+      <line x1="-54" y1="54" x2="54" y2="-54"/>
+    </g>
+    <circle r="26" fill="url(#chrome)"/>
+    <circle r="10" fill="#334155"/>
+  </g>
+
+  <!-- front wheel -->
+  <g transform="translate(700 715)">
+    <circle r="125" fill="#0f172a"/>
+    <circle r="98" fill="#1e293b"/>
+    <circle r="78" fill="none" stroke="url(#chrome)" stroke-width="8"/>
+    <g stroke="#94a3b8" stroke-width="7" stroke-linecap="round">
+      <line x1="0" y1="-76" x2="0" y2="76"/>
+      <line x1="-76" y1="0" x2="76" y2="0"/>
+      <line x1="-54" y1="-54" x2="54" y2="54"/>
+      <line x1="-54" y1="54" x2="54" y2="-54"/>
+    </g>
+    <circle r="44" fill="none" stroke="#64748b" stroke-width="6"/>
+    <circle r="22" fill="url(#chrome)"/>
+    <circle r="9" fill="#334155"/>
+  </g>
+
+  <!-- swing arm + chain -->
+  <path d="M215 715 L420 650" stroke="#334155" stroke-width="26" stroke-linecap="round"/>
+  <path d="M215 690 L410 632 M215 740 L415 668" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- rear shock -->
+  <path d="M265 690 L330 540" stroke="#f97316" stroke-width="16" stroke-linecap="round"/>
+  <path d="M272 674 L322 556" stroke="#fdba74" stroke-width="5" stroke-dasharray="10 8"/>
+
+  <!-- front fork -->
+  <path d="M700 715 L610 440" stroke="url(#chrome)" stroke-width="26" stroke-linecap="round"/>
+  <path d="M690 715 L600 440" stroke="#475569" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- front fender -->
+  <path d="M590 628 Q700 560 800 640" fill="none" stroke="#ea580c" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- frame -->
+  <path d="M330 540 L600 450 L500 660 L410 650 Z" fill="none" stroke="#1e293b" stroke-width="22" stroke-linejoin="round"/>
+
+  <!-- engine -->
+  <g>
+    <rect x="390" y="545" width="150" height="120" rx="20" fill="#334155"/>
+    <g fill="#475569">
+      <rect x="405" y="560" width="120" height="12" rx="6"/>
+      <rect x="405" y="582" width="120" height="12" rx="6"/>
+      <rect x="405" y="604" width="120" height="12" rx="6"/>
+    </g>
+    <circle cx="430" cy="640" r="20" fill="url(#chrome)"/>
+    <circle cx="430" cy="640" r="8" fill="#334155"/>
+  </g>
+
+  <!-- exhaust -->
+  <path d="M470 665 Q440 740 330 730 L170 722" fill="none" stroke="url(#chrome)" stroke-width="24" stroke-linecap="round"/>
+  <rect x="150" y="704" width="120" height="38" rx="19" fill="url(#chrome)"/>
+  <circle cx="156" cy="723" r="12" fill="#475569"/>
+
+  <!-- rear tail / seat cowl -->
+  <path d="M175 520 Q240 470 360 478 L380 530 Q280 540 200 560 Z" fill="url(#tank)"/>
+  <path d="M160 548 L210 540" stroke="#dc2626" stroke-width="14" stroke-linecap="round"/>
+
+  <!-- seat -->
+  <path d="M245 482 Q320 440 440 458 L450 492 Q340 492 255 512 Z" fill="#0f172a"/>
+
+  <!-- fuel tank -->
+  <path d="M430 455 Q500 395 600 410 Q630 430 615 470 Q540 510 445 505 Z" fill="url(#tank)"/>
+  <path d="M470 440 Q530 418 585 428" fill="none" stroke="#fed7aa" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <text x="508" y="482" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="2">HAMIZ</text>
+
+  <!-- handlebar + mirror -->
+  <path d="M600 430 L640 365 L700 355" fill="none" stroke="#1e293b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="690" y="342" width="44" height="22" rx="11" fill="#0f172a"/>
+  <path d="M625 385 L612 320" stroke="#334155" stroke-width="7" stroke-linecap="round"/>
+  <ellipse cx="610" cy="312" rx="24" ry="13" fill="#1e293b"/>
+
+  <!-- headlight cowl -->
+  <path d="M615 420 Q670 395 700 430 Q690 470 640 478 Z" fill="#ea580c"/>
+  <ellipse cx="680" cy="440" rx="18" ry="24" fill="#fef3c7" stroke="#e2e8f0" stroke-width="5"/>
+  <path d="M708 425 L800 400 M710 440 L812 440 M708 455 L800 480" stroke="#fde68a" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- rear light -->
+  <rect x="150" y="530" width="22" height="16" rx="6" fill="#ef4444"/>
+
+  <!-- footpeg -->
+  <circle cx="400" cy="672" r="10" fill="#94a3b8"/>
+</svg>

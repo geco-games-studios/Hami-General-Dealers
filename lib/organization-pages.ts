@@ -81,7 +81,7 @@ export const organizationPages: Record<string, OrganizationPageData> = {
     eyebrow: 'Hamiz Motors',
     headline: 'Motorbikes, parts, and rider gear',
     description: 'Hamiz Motors sells motorbikes, motorbike parts, and riding materials including clothes, gloves, boots, and related gear.',
-    heroImage: '/images/hami-hero-hamiz.png',
+    heroImage: '/images/hamiz/hero-motorbike.svg',
     // Save product photos in public/images/hamiz, then set each src below
     // to its public path, e.g. '/images/hamiz/motorbike-1.jpg'.
     // Update alt with the product name. Add more entries for more photos.
